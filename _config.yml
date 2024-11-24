@@ -15,14 +15,9 @@ linkedin_username: "phanuphats"
 # youtube_username: username
 # googleplus_username: +username
 
-favicon: /images/favicon.ico
-
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-remote_theme: jekyll/minima
-minima:
-  skin: dark
 
 # rss: rss
 
@@ -34,6 +29,10 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-remote-theme
+
+remote_theme: jekyll/minima
+minima:
+  skin: dark
 
 titles_from_headings:
   strip_title: true
