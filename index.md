@@ -1,5 +1,6 @@
-Here you can say lots of fun things about your site.
+Hi! I'm Oad! Right now, I'm focused on two things I enjoy: improving everyday processes to make them faster and more fun, and creating interactive tools that make learning engaging and exciting.
 
-Maybe say a some things about yourself.
+On this website, I share my mini pet projects and cool findings I've encountered along my learning and building journeys.
 
-Or maybe what you plan to blog about.
+🐙 Visit My GitHub: https://github.com/oadultradeepfield
+💻 Discover My Work: https://www.phanuphats.com/

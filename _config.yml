@@ -1,31 +1,33 @@
-title: "My Blogs Name"
-author: "Default Author Name"
-description: "Some short description of your blog can go here." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+title: "Oad's Blogs"
+author: "Phanuphat (Oad) Srisukhawasu"
+description: "My blog where I share my mini pet projects and cool findings I've encountered along my learning and building journeys." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
-email: "example@mail.com"
-twitter_username: "twitteruser"
-github_username: "githubuser"
-linkedin_username: "linkedinuser"
-#facebook_username: username
-#flickr_username: username
-#instagram_username: username
-#pinterest_username: username
-#youtube_username: username
-#googleplus_username: +username
+email: "phanuphat.srisukhawasu@gmail.com"
+github_username: "oadultradeepfield"
+linkedin_username: "phanuphats"
+# twitter_username: "twitteruser"
+# facebook_username: username
+# flickr_username: username
+# instagram_username: username
+# pinterest_username: username
+# youtube_username: username
+# googleplus_username: +username
 
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
 theme: "minima"
+minima:
+  skin: dark
 
-rss: rss
+# rss: rss
 
 kramdown:
   syntax_highlighter_opts:
     disable: true
-    
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
