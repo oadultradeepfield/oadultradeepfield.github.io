@@ -2,5 +2,5 @@ Hi! I'm Oad! Right now, I'm focused on two things I enjoy: improving everyday pr
 
 On this website, I share my mini pet projects and cool findings I've encountered along my learning and building journeys.
 
-🐙 Visit My GitHub: https://github.com/oadultradeepfield
+🐙 Visit My GitHub: https://github.com/oadultradeepfield <br>
 💻 Discover My Work: https://www.phanuphats.com/
