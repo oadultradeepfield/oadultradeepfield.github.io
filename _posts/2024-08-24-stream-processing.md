@@ -229,6 +229,6 @@ const ones = pair(1, () => ones);
 const integers_2 = partial_sums_2(ones);
 ```
 
-In this case, the implementation does not benefit from memoization because the stream `ones` is never reused. Instead, it is recreated repeatedly throughout the program. As a result, the memoized results cannot be accessed or reused like in the earlier examples thus the order of growth is still $1+2+...+n-1+n=\displaystyle\frac{n(n-1)}$ which is $\Theta (n^2)$.
+In this case, the implementation does not benefit from memoization because the stream `ones` is never reused. Instead, it is recreated repeatedly throughout the program. As a result, the memoized results cannot be accessed or reused like in the earlier examples thus the order of growth is still $1+2+...+n-1+n=\displaystyle\frac{n(n-1)}{2}$ which is $\Theta (n^2)$.
 
 Wish me luck for the upcoming finals—here’s hoping all this effort pays off!
