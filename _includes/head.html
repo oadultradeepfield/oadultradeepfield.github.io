@@ -17,8 +17,35 @@
   <!-- End Google Analytics -->
   {% endif %}
 
+  <!-- Begin MathJax support -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+        displayMath: [
+          ["$$", "$$"],
+          ["\\[", "\\]"],
+        ],
+        processEscapes: true,
+        processEnvironments: true,
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+      },
+    };
+  </script>
+  <script
+    type="text/javascript"
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+  <!-- End MathJax support -->
+
   <!-- Begin highlight.js support -->
-  <!-- Load highlight.js from CDN with a different theme -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
@@ -48,8 +75,8 @@
       brightness: 100,
       contrast: 90,
       sepia: 0,
-      darkSchemeBackgroundColor: "#1a1b2e", // Darker blue background
-      darkSchemeTextColor: "#e3e4ee", // Light grayish blue text
+      darkSchemeBackgroundColor: "#21262d", // Darker blue background
+      darkSchemeTextColor: "#ecf2f8", // Light grayish blue text
       lightSchemeBackgroundColor: "#ffffff",
       lightSchemeTextColor: "#000000",
     });
