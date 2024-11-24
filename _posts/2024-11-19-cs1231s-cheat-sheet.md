@@ -2,7 +2,7 @@
 tags: NUS Cheat Sheet
 ---
 
-# CS1231S Discrete Structures Cheat Sheet (Open-Book)
+# CS1231S Discrete Structures (Open-Book)
 
 > _These are things I found pretty helpful as an average student. They might not cover everything, but I refer to them whenever I need some intuition._
 
@@ -327,7 +327,7 @@ tags: NUS Cheat Sheet
 
   - **Out-degree**: Number of outgoing edges.
 
-- **Handshaking Lemma**: $\displaystyle\sum_{v \in V} \deg(v) = 2|E|$
+- **Handshaking Lemma**: $\sum_{v \in V} \deg(v) = 2|E|$
   for undirected graphs.
 
 - **Path**: A sequence of vertices where each pair of consecutive
@@ -351,7 +351,7 @@ tags: NUS Cheat Sheet
 
 - **Complete Graph ($K_n$)**: A graph where every pair of vertices is
   connected by an edge.
-  $\displaystyle|E| = \binom{n}{2} = \frac{n(n-1)}{2}$.
+  $|E| = \binom{n}{2} = \frac{n(n-1)}{2}$.
 
 - **Bipartite**: A graph whose vertices can be divided into two
   disjoint sets such that every edge connects a vertex in one set to a
@@ -421,4 +421,6 @@ tags: NUS Cheat Sheet
 - **Theorem 10.5.2**: Any tree with $n$ vertices ($n > 0$) has $n - 1$
   edges.
 
-![image](/img/meme/cheerful.jpg)
+<div style="text-align: center;">
+  <img src="../img/meme/cheerful.jpg" style="width: 100%; display: block;">
+</div>
