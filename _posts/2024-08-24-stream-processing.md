@@ -8,7 +8,7 @@ While reviewing for CS1101S AY2024/25 Semester 1 Final Assessment, I found the c
 
 **Note**: [CS1101S Programming Methodology](https://nusmods.com/courses/CS1101S/programming-methodology) is one of the most foundational computer science courses at National University of Singapore (NUS). The course follows the textbook _Structure and Interpretation of Computer Programs, JavaScript Adaptation (SICP JS)_. Streams are adapted from [Section 3.5, Stream Processing](https://sourceacademy.org/sicpjs/3.5).
 
-## Building `pair` Functionally
+## Building Pairs Functionally
 
 The following lines of code are my approach to creating `pair`, which consists of two data elements in the corresponding order. Applying `head` function to a pair returns the first element, and using `tail` returns the second element. I am unsure if Source implements it this way, but this version will serve the following tasks.
 
