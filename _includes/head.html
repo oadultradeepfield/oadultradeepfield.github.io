@@ -18,10 +18,10 @@
   {% endif %}
 
   <!-- Begin highlight.js support -->
-  <!-- Load highlight.js from CDN -->
+  <!-- Load highlight.js from CDN with a different theme -->
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
   />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
@@ -38,12 +38,21 @@
     });
   </script>
   <!-- End highlight.js support -->
+
   {% if jekyll.environment == 'production' -%}
-  <!-- dark theme using DarkReader -->
+  <!-- dark theme using DarkReader with custom settings -->
   <script src="//unpkg.com/darkreader@4.9.96/darkreader.js"></script>
   <script type="text/javascript">
     DarkReader.setFetchMethod(window.fetch); // Fix to remedy CORS errors in chrome console
-    DarkReader.enable({ brightness: 100, contrast: 90, sepia: 0 });
+    DarkReader.enable({
+      brightness: 100,
+      contrast: 90,
+      sepia: 0,
+      darkSchemeBackgroundColor: "#1a1b2e", // Darker blue background
+      darkSchemeTextColor: "#e3e4ee", // Light grayish blue text
+      lightSchemeBackgroundColor: "#ffffff",
+      lightSchemeTextColor: "#000000",
+    });
   </script>
   {%- endif %}
 </head>
