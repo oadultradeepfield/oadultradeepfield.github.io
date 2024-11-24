@@ -1,5 +1,5 @@
 ---
-tags: "NUS Cheat Sheet"
+tags: "Cheatsheet"
 ---
 
 # CS1231S Discrete Structures (Open-Book)
