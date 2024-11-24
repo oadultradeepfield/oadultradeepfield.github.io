@@ -421,6 +421,4 @@ tags: NUS Cheat Sheet
 - **Theorem 10.5.2**: Any tree with $n$ vertices ($n > 0$) has $n - 1$
   edges.
 
-<div style="text-align: center;">
-  <img src="../img/meme/cheerful.jpg" style="width: 100%; display: block;">
-</div>
+![](/img/meme/cheerful.jpg)
