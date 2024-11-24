@@ -4,8 +4,11 @@ hr {
 }
 
 .wrapper {
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 20px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Post navigation links */
