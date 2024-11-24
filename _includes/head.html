@@ -43,8 +43,7 @@
   <script src="//unpkg.com/darkreader@4.9.96/darkreader.js"></script>
   <script type="text/javascript">
     DarkReader.setFetchMethod(window.fetch); // Fix to remedy CORS errors in chrome console
-    //DarkReader.enable();
-    DarkReader.auto({ brightness: 100, contrast: 90, sepia: 0 });
+    DarkReader.enable({ brightness: 100, contrast: 90, sepia: 0 });
   </script>
   {%- endif %}
 </head>

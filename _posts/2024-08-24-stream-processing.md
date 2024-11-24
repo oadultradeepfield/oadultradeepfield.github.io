@@ -1,6 +1,6 @@
 ---
 tags: CS1101S
-math: true
+useMath: true
 ---
 
 # Implementation of Source §4 Streams from Scratch in JavaScript
