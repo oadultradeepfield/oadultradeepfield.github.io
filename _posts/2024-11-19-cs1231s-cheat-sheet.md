@@ -103,7 +103,7 @@ tags: NUS-Cheat-Sheet
 
 - **Composition of Relations ($S \circ R$)**: For relations
   $R \subseteq A \times B$ and $S \subseteq B \times C$,
-  $R \circ S = \{(a, c) | \exists b \in B , ((a, b) \in R \land (b, c) \in S)\}$.
+  $S \circ R = \\{(a, c) | \exists b \in B , ((a, b) \in R \land (b, c) \in S)\\}$.
 
 - **Associativity of Composition**:
   $(T \circ S) \circ R = T \circ (S \circ R)$.
@@ -120,7 +120,7 @@ tags: NUS-Cheat-Sheet
 
 - **Equivalence Relation**: A relation that is reflexive, symmetric,
   and transitive. For an equivalence relation $\sim$ on a set $X$, an
-  equivalence class $[x] = \{y \in X | x \sim y\}$.
+  equivalence class $[x] = \\{y \in X | x \sim y\\}$.
 
 - **Lemma Rel.1 Equivalence Classes**: Let $\sim$ be an equivalence
   relation on a set $A$. The following are equivalent for all
@@ -173,7 +173,7 @@ tags: NUS-Cheat-Sheet
 - **Range**: The set of all actual output values of a function.
 
 - **Image**: For a function $f: X \rightarrow Y$ and a set
-  $A \subseteq X$, $f(A) = \{f(x) \mid x \in A\}$.
+  $A \subseteq X$, $f(A) = \\{f(x) \mid x \in A\\}$.
 
 - **Injective (One-to-One)**: A function where no two distinct
   elements in the domain map to the same element in the codomain.
