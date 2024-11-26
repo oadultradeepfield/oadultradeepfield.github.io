@@ -13,7 +13,7 @@ tags: NUS-Cheat-Sheet
 - **T11 - Zero Product Property**: $ab = 0 \implies a = 0 \lor b = 0$
 - **T21:** $a \neq 0 \implies a^2>0$.
 - **T25**: If the product of two numbers is positive, then both numbers are either positive or both are negative
-- **T27**: $\forall a, b, c \in \mathbb{R}$ $((0 < a < c \land 0 < b < d) \implies 0 < ab < cd$.
+- **T27**: $\forall a, b, c \in \mathbb{R}$ $((0 < a < c \land 0 < b < d) \implies 0 < ab < cd)$.
 - **Ord1**: If $a$ and $b$ are positive,
   so are $a+b$ and $ab$.
 
@@ -23,7 +23,7 @@ tags: NUS-Cheat-Sheet
 - To prove statements aren't equivalent, we can plug in truth values and show that some rows in their truth tables don’t match.
 - The contrapositive of $p\implies q$ is $\neg q \implies \neg p$, which are equivalent. The inverse, $\neg p \implies \neg q$, is equivalent to the converse, $q \implies p$.
 - **Valid Argument**: If all premises are true (critical rows), the conclusion must also be true. An argument is invalid if the conclusion can be false, even when the premises are true.
-- **Transitive Rule of Inference**: $((p\implies q) \land (q\implies p))\implies p\implies r$.
+- **Transitive Rule of Inference**: $((p\implies q) \land (q\implies r))\implies p\implies r$.
 - **Implication Law**: $p \implies q \equiv \neg p \lor q$.
 - **Negation of a Conditional Statement**: $\neg (p\implies q)\equiv p\land \neg q$
 - **De Morgan's Laws**: $\neg(p \land q) \equiv \neg p \lor \neg q$ and $\neg(p \lor q) \equiv \neg p \land \neg q$.
@@ -61,7 +61,7 @@ tags: NUS-Cheat-Sheet
 
 ## Tutorial 6 (Functions)
 
-- A function takes an **input from the domain** and gives **a single output in the codomain**. No input can have more than one output and each input need to have an output.
+- A function takes an **input from the domain** and gives **a single output in the codomain**. No input can have more than one output and each input needs to have an output.
 - **(Theorem 7.2.3)** The **composition** of two or more injective functions is also **injective**, and **(Theorem 7.2.4)** the **composition** of two or more surjective functions is also **surjective**.
 - A function is **injective ($\forall x_1,x_2 (f(x_1)=f(x_2)\implies x_1=x_2$))** $\iff$ it has a **left inverse**, and is **surjective ($\forall y,\exists x,f(x)=y$)** $\iff$ it has a **right inverse**.
 
