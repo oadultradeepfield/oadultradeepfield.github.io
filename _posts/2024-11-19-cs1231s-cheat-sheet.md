@@ -8,7 +8,7 @@ tags: NUS-Cheat-Sheet
 
 **Note**: Taken in AY2024/25 Semester 1
 
-## Real Numbers Theorem
+## Real Numbers
 
 - **T11 - Zero Product Property**: $ab = 0 \implies a = 0 \lor b = 0$
 - **T21:** $a \neq 0 \implies a^2>0$.
