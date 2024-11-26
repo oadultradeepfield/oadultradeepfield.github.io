@@ -2,7 +2,7 @@
 tags: NUS-Cheat-Sheet
 ---
 
-# CS1231S Discrete Structures (Open-Book)
+# CS1231S Discrete Structures
 
 > _These are things I found pretty helpful as an average student. They might not cover everything, but I refer to them whenever I need some intuition._
 
