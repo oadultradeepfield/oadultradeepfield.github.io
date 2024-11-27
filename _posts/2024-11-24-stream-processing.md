@@ -49,6 +49,8 @@ function tetranacci_gen(a, b, c, d) {
 const tetranacci = tetranacci_gen(0, 0, 0, 1);
 ```
 
+---
+
 ## Recreating Predeclared Stream Functions
 
 ### Essential Stream Operations
@@ -165,6 +167,8 @@ function stream_remove_all(v, s) {
 ```
 
 **Note**: I omitted some functions that involved `list` or were not commonly featured in past assessments.
+
+---
 
 ## Extra: Stream Memoization
 

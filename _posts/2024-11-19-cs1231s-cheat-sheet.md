@@ -17,6 +17,8 @@ tags: NUS-Cheat-Sheet
 - **Ord1**: If $a$ and $b$ are positive,
   so are $a+b$ and $ab$.
 
+---
+
 ## Tutorial 1 - 2 (Logic and Proofs)
 
 - The statement "$q$ if $p$" or "$p$ only if $q$" means $p\implies q$. Here, $p$ is a sufficient condition for $q$, and $q$ is a necessary condition for $p$.
@@ -35,6 +37,8 @@ tags: NUS-Cheat-Sheet
 - **Identity Law**: $p \lor \text{False} \equiv p$ and $p \land \text{True} \equiv p$.
 - It’s good practice to write statements inside brackets **after a quantifier**, like $\forall x\in A(P(x))$ or $\forall x \in A$ such that $P(x)$, to clearly show that $x$ is bounded. Otherwise, $x$ could be a **free variable**.
 
+---
+
 ## Tutorial 3 (Sets)
 
 - **Proving subset $A\subseteq B$**: Select an arbitrary element $x \in A$ and show that $x \in B$
@@ -48,6 +52,8 @@ tags: NUS-Cheat-Sheet
 - **Complement Law**: $A \cup \overline{A} = U$ (where $U$ is the universal set)
 - **Identity Law**: $A \cap U = A$ (where $U$ is the universal set)
 
+---
+
 ## Tutorial 4 - 5 (Relations)
 
 - A **symmetric relation** also implies $R=R^{-1}$.
@@ -59,16 +65,22 @@ tags: NUS-Cheat-Sheet
 - A **linear extension** of a partial order is a total order where all elements are comparable. To count the number of possible linearizations, we can use **recursion** to add **minimal elements**, accordingly.
 - A **chain** in a partial order is a subset where every pair of elements is comparable, forming a total order. Its length is **one less than** the number of elements. A **maximal chain** is a chain $M$ that cannot be extended by adding more elements.
 
+---
+
 ## Tutorial 6 (Functions)
 
 - A function takes an **input from the domain** and gives **a single output in the codomain**. No input can have more than one output and each input needs to have an output.
 - **(Theorem 7.2.3)** The **composition** of two or more injective functions is also **injective**, and **(Theorem 7.2.4)** the **composition** of two or more surjective functions is also **surjective**.
 - A function is **injective ($\forall x_1,x_2 (f(x_1)=f(x_2)\implies x_1=x_2$))** $\iff$ it has a **left inverse**, and is **surjective ($\forall y,\exists x,f(x)=y$)** $\iff$ it has a **right inverse**.
 
+---
+
 ## Tutorial 7 (Mathematical Induction)
 
 - **Mathematical Induction (MI)**: Define $P(n)$, prove base case, assume $P(k)$ true, prove $P(k) \implies P(k+1)$, conclude $P(n)$ true for all $n \geq$ base case.
 - **Strong Mathematical Induction (Strong MI)**: Define $P(n)$, prove base case, assume $P(i), P(i+1), \dots, P(k)$ true, prove $P(i) \land P(i+1) \land \dots \land P(k) \implies P(k+1)$, conclude $P(n)$ true for all $n \geq$ base case.
+
+---
 
 ## Tutorial 8 (Cardinality)
 
@@ -79,6 +91,8 @@ tags: NUS-Cheat-Sheet
 - **Pigeonhole Principle (PHP)**: Let $A$ and $B$ be finite sets. If there is an injection $f: A\to B$, then the cardinality of $A$ is $\leq$ that of $B$.
 - **$\mathbb{Z}^+ \times \mathbb{Z}^+$ is countable**: Used in the proof that the union of countably infinite sets indexed by $\mathbb{Z}^+$ is countable.
 
+---
+
 ## Tutorial 9 - 10 (Counting and Probability)
 
 - **Inclusion-Exclusion Principle**: $P(A\cup B\cup C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cap B\cap C)$.
@@ -87,6 +101,8 @@ tags: NUS-Cheat-Sheet
 - **Stars and Bars**: For placing $n$ indistinguishable objects into $k$ boxes, the number of ways depends on the **constraint of minimum objects per box**: $\displaystyle\binom{n+k-1}{k-1}$ when boxes can be empty, $\displaystyle\binom{n-1}{k-1}$ with **at least one** object per box ($n+k-1-k=n-1$).
 - **Binomial Theorem**: $\displaystyle(x+y)^n=\sum_{k=0}^n\binom{n}{k}x^{n-k}y^k$.
 - **Linearity of Expected Value**: $E(X_1+X_2+\cdots+X_n)=E(X_1)+E(X_2)+\cdots+E(X_n)$.
+
+---
 
 ## Tutorial 10 - 11 (Graphs and Trees)
 
