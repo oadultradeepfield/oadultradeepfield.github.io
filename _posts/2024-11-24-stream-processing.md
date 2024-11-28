@@ -1,5 +1,5 @@
 ---
-tags: CS1101S
+tags: NUS-Courses
 ---
 
 # Implementation of Source §4 Streams from Scratch in JavaScript
@@ -7,6 +7,8 @@ tags: CS1101S
 While reviewing for CS1101S AY2024/25 Semester 1 Final Assessment, I found the concepts of streams and lazy evaluation astonishing, yet challenging. Therefore, I attempted to implement pairs and streams from scratch in pure JavaScript to sharpen my skills.
 
 **Note**: [CS1101S Programming Methodology](https://nusmods.com/courses/CS1101S/programming-methodology) is one of the most foundational computer science courses at National University of Singapore (NUS). The course follows the textbook _Structure and Interpretation of Computer Programs, JavaScript Adaptation (SICP JS)_. Streams are adapted from [Section 3.5, Stream Processing](https://sourceacademy.org/sicpjs/3.5).
+
+---
 
 ## Building Pairs Functionally
 

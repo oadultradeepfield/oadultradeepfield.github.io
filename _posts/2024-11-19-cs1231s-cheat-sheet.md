@@ -1,5 +1,5 @@
 ---
-tags: NUS-Cheat-Sheet
+tags: Cheatsheet
 ---
 
 # CS1231S Discrete Structures
@@ -106,9 +106,26 @@ tags: NUS-Cheat-Sheet
 
 ## Tutorial 10 - 11 (Graphs and Trees)
 
+- **Theorem 10.1.1**: The total degree of a graph is $2$ times the number of edges (which is even).
+- **Proposition 10.1.3**: In any graph, there are an even number of edges with odd degree.
+- **Lemma 10.2.1**: Let $G$ be a graph. (a) If $G$ is connected, then any two distinct vertices of $G$ can be connected by a path. (b) If vertices $v$ and $w$ are part of a circuit in $G$ and one edge is removed from the circuit, then there still exists a trail from $v$ to $w$ in $G$. (c) If $G$ is connected and $G$ contains a circuit, then an edge of the circuit can be removed without disconnecting $G$.
+- **Theorem 10.2.4**: A graph $G$ has an Euler circuit $\iff$ $G$ is connected and every vertex of $G$ has positive even degree.
+- **Corollary 10.2.5**: Let $G$ be a graph, and let $v$ and $w$ be two distinct vertices of $G$. There is an Euler trail from $v$ to $w$ $\iff G$ is connected, $v$ and $w$ have odd degree, and all other vertices of G have positive even degree.
+- **Proposition 10.2.6**: If a graph $G$ has a Hamiltonian circuit, then $G$ has a subgraph $H$ with the following properties:
+
+  1. $H$ contains every vertex of $G$.
+  2. $H$ is connected.
+  3. $H$ has the same number of edges as vertices.
+  4. Every vertex of $H$ has degree 2.
+
 - If $A$ is the adjacency matrix of a graph $G$, then $A_{ij}=A_{ji}$ if $G$ is undirected (symmetric). Additionally, $A^n_{ij}$ gives the numbers of walks of length $n$ (have $n$ edges in the walks) from vertex $i$ to vertex $j$.
+- For a graph $G$ with $n$ vertices, if $G$ is $K_n$ **(complete graph)**, then it has $n(n-1)/2$ edges, and if $G$ is $K_{m,n}$ **(complete bipartite graph)**, then it has $mn$ edges.
 - A **self-complementary** graph is **isomorphic** with its complement.
+- **Theorem 10.4.1**: Let $S$ be a set of graphs and let $\cong$ be the relation of graph isomorphism on $S$. Then $\cong$ is an equivalence relation on $S$.
 - A **dominating Set ($D$)** in a graph $G$ is a subset of vertices such that every vertex not in $D$ is adjacent to some vertex in $D$. The **minimal dominating set** is a set such that **none of its proper subsets** are dominating.
+- **Euler's Formula**: For a planar graph $G$ with $e$ edges, $v$ vertices, and $f$ faces: $f=e-v+2$.
+  - If $G$ is a simple planar graph with $v\geq 3$, then $e\leq 3v-6$.
+  - If $G$ is a bipartite planar graph with $v\geq 3$, then $e\leq 2v-4$.
 - **Number of Spanning Trees**: For a tree, there's 1 spanning tree; for a cyclic graph with $n$ vertices, $n$ spanning trees (there are $n$ ways to remove one edge); for a complete graph with $n$ vertices, $n^{n-2}$ spanning trees (Cayley's formula).
 - **Kruskal's Algorithm**: Add minimum-weight edges without creating cycles until all vertices are included.
 - **Prim's Algorithm**: Start with an arbitrary node, progressively add minimum-weight edges connecting to unvisited vertices.
