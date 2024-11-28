@@ -89,7 +89,7 @@ The set $D_{30}$ contains the elements $1, 2, 3, 5, 6, 10, 15, 30$. For the divi
 **Note**: For this problem, I initially came up with `const f = x => x === 0.5 ? 1 : x` (it's just easier to type this way). However, this won't be surjective since the number $0.5$ itself won't be covered. Therefore, we need to recursively handle the remaining cases as follows:
 
 1. Define a bijective function:
-   $f(x) = \begin{cases} 2x & \text{if } x = \frac{1}{2^n} \text{ for some positive integer } n, \\ x & \text{otherwise}. \end{cases}$
+   $f(x) = 2x\  \text{if}\  x = \frac{1}{2^n} \text{ for some } n \in \mathbb{Z}^+, \ \text{otherwise} \ f(x) = x.$
 2. Prove that $f$ is injective:
 
    1. Let $f(x_1)=f(x_2)$ for some $x_1,x_2\in (0,1)$.
@@ -160,9 +160,9 @@ The set $D_{30}$ contains the elements $1, 2, 3, 5, 6, 10, 15, 30$. For the divi
 
 #### Part (b)
 
-(i) $P(\text{Disease}\\|\text{Positive})=\frac{P(\text{Positive}\\|\text{Disease})\times P(\text{Disease})}{P(\text{Positive})}=\frac{0.85\times 0.001}{0.1}=0.0085$.
+(i) $P(\text{Disease}\vert\text{Positive})=\frac{P(\text{Positive}\vert\text{Disease})\times P(\text{Disease})}{P(\text{Positive})}=\frac{0.85\times 0.001}{0.1}=0.0085$.
 
-(ii) $P(\text{Positive}\\|\overline{\text{Disease}})=\frac{P(\overline{\text{Disease}})\\|\text{Positive}\times P(\text{Positive})}{P(\overline{\text{Disease})}}=\frac{(1-0.0085)(0.1)}{0.999}=0.0992$.
+(ii) $P(\text{Positive}\vert\overline{\text{Disease}})=\frac{P(\overline{\text{Disease}})\vert\text{Positive}\times P(\text{Positive})}{P(\overline{\text{Disease})}}=\frac{(1-0.0085)(0.1)}{0.999}=0.0992$.
 
 #### Part (c)
 
@@ -206,7 +206,7 @@ Note that the number of equivalence relations is the same as the number of parti
 
 (d) We can pack $2$ tasks together to guarantee an even number of tasks. The problem now becomes a stars and bars problem: $\binom{8+4-1}{4-1}=165$ ways.
 
-(e) $P(\text{Google}\\|\text{Bonus})=(0.8)(0.85)/(0.8\times0.85+0.95\times 0.15)=0.8267$.
+(e) $P(\text{Google}\vert\text{Bonus})=(0.8)(0.85)/(0.8\times0.85+0.95\times 0.15)=0.8267$.
 
 (f) The numbers that could be read upside down are $0,1,6,8,9$. Some of these have duplicates: the middle number could be $0,1,8$. The first digit could be any of the five numbers, since even if it's $6$, there is a corresponding $9$ that causes confusion. Therefore, the total number of ways is $5^5 - 5 \times 5 \times 3 = 3050$ ways.
 
@@ -220,7 +220,7 @@ Note that the number of equivalence relations is the same as the number of parti
 
 (c) Even numbers on the dice are $2, 4, 6$. With the given condition, we can have a trivial probability for each number of $2/21$, $4/21$, $6/21$. Therefore, the total probability is $12/21 = 4/7$.
 
-(d) $P(A\\|\text{defected})=\frac{(0.5)(25)}{(0.5)(0.25)+(0.4)(0.35)+(0.2)(0.4)}=25/69$.
+(d) $P(A\vert\text{defected})=\frac{(0.5)(25)}{(0.5)(0.25)+(0.4)(0.35)+(0.2)(0.4)}=25/69$.
 
 (e) For this problem, we can manually find the number of ways to produce all differences from $0$ to $5$. The answer is $\frac{(0)(6) + (1)(10) + (2)(8) + (3)(6) + (4)(4) + (5)(2)}{36} = 35/18 \approx 1.944$.
 
@@ -250,7 +250,7 @@ Using Prim's algorithm, starting from vertex $0$ (the first entry in the matrix)
 
 #### Part (b)
 
-We calculate $A^4= \begin{bmatrix}49 &60 &68\\60 & 83 & 94 \\ 34 & 47 & 62\end{bmatrix}$. From this, we see that $A_{13}$ represents the number of walks of length $4$ from $v_1$ to $v_3$, which is 68.
+We calculate $A^4$ (output omitted). From this, we see that $A_{13}$ represents the number of walks of length $4$ from $v_1$ to $v_3$, which is 68.
 
 #### Part (c)
 
