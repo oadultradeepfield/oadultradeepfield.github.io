@@ -133,5 +133,5 @@ tags: Cheatsheet
 - **Lemma 10.5.5**: Let $G$ be a simple, undirected graph. If there are two distinct paths from a vertex $v$ to a different vertex $w$, then $G$ contains a cycle (and hence $G$ is cyclic).
 - **Proposition 10.7.1**: (i) Every connected graph has a spanning tree. (ii) Any two spanning trees for a graph have the same number of edges.
 - We can systematically **draw non-isomorphic trees** by **progressively increasing node degrees** or by **modifying trees with one less vertex** by adding connections at different positions.
-- **Binary Tree Traversal**: **Preorder** (Node, Left, Right), **Inorder** (Left, Node, Right), **Postorder** (Left, Right, Node); unique trees determined by combining Preorder with Inorder or Inorder with Postorder
+- **Binary Tree Traversal**: **Preorder** (Node, Left, Right), **Inorder** (Left, Node, Right), **Postorder** (Left, Right, Node); unique trees determined by combining Preorder with Inorder or Inorder with Postorder.
 - With only inorder traversal, $2^n - n$ distinct binary trees can be drawn with $n$ vertices.
