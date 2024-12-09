@@ -4,6 +4,10 @@ tags: Astronomy-Astrophysics
 
 # Astronomical POV on Galaxy10 Anomaly Detection
 
+> _"Somewhere, something incredible is waiting to be known."_
+>
+> — _Carl Sagan_
+
 In the past week, I revisited my previous projects to brainstorm ideas for upgrading them. The first project that came to mind was Galaxy Morphology Classification using ConvNeXtTiny. I challenged myself by limiting the resources available to the free-tier Kaggle Notebook to avoid spending too much time or resources. Additionally, I wanted to make the most out of the dataset, so I decided to use the same Galaxy10 DECals dataset.
 
 ## Some Background on the Dataset
