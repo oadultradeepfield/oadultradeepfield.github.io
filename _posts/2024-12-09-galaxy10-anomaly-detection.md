@@ -14,13 +14,13 @@ In the past week, I revisited my previous projects to brainstorm ideas for upgra
 
 The [Galaxy10 DECals](https://astronn.readthedocs.io/en/latest/galaxy10.html) dataset was designed as an astronomical counterpart to the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset. It contains images of galaxies collected from a long history of sky surveys, including the Galaxy Zoo project, if you've heard of it. The labeling process was carried out by volunteers using decision trees created by professionals. However, some classifications may be inaccurate, or certain galaxies may be difficult to distinguish visually. The numbers 0 to 9 in the dataset are coded as follows:
 
-```
+```bash
 Galaxy10 dataset (17736 images)
 ├── Class 0 (1081 images): Disturbed Galaxies
 ├── Class 1 (1853 images): Merging Galaxies
 ├── Class 2 (2645 images): Round Smooth Galaxies
 ├── Class 3 (2027 images): In-between Round Smooth Galaxies
-├── Class 4 ( 334 images): Cigar Shaped Smooth Galaxies
+├── Class 4 (334 images) : Cigar Shaped Smooth Galaxies
 ├── Class 5 (2043 images): Barred Spiral Galaxies
 ├── Class 6 (1829 images): Unbarred Tight Spiral Galaxies
 ├── Class 7 (2628 images): Unbarred Loose Spiral Galaxies
