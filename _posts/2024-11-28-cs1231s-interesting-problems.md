@@ -4,7 +4,7 @@ tags: NUS-Courses
 
 # Interesting Problems from CS1231S Past Year Papers
 
-> _Most of us spend too much time on what is urgent and not enough time on what is important_
+> _"Most of us spend too much time on what is urgent and not enough time on what is important"_
 >
 > -- _Stephen R. Covey_
 
