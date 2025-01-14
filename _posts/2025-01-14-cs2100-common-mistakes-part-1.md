@@ -14,7 +14,7 @@ As you read this blog, you may realize that I am taking the CS 2K Trinity Module
 
 ## Lecture 3: Data Representation and Number Systems
 
-- When converting a binary number to an 8-bit 1's or 2's complement, such as $01001010_{2}$, the result is simply $01001010_{\text{1s}}$ and $01001010_{\text{2s}}$. You only negate the bits or add one after negation (for the 2's complement) when you need to find the negative value $-(01001010_{2})$, which, for example, is $10110110_{\text{2s}}$.
+- When converting a binary number to an 8-bit 1's or 2's complement, such as `01001010`, the result is simply `01001010` for both. You only negate the bits or add one after negation (for the 2's complement) when you need to find the negative value `-(01001010)`, which, for example, is `10110110`.
 - The IEEE-754 format can be more conveniently represented as 8 hexadecimal digits, but it is worth noting that you first need to convert the binary into a form like $1.XXXX \times 2^n$. The 32 bits of IEEE-754 consist of 1 sign bit (0 for positive and 1 for negative), 8 bits for the exponent in excess-127 notation, and the remaining 23 bits represent the fractional part, arranged from left to right.
 - Below is a useful bit table to memorize or refer to, making binary-to-hexadecimal conversion faster:
 
