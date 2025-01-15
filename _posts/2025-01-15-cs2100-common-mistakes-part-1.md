@@ -37,7 +37,9 @@ We can declare a variable `int *p`, which is a pointer `p` pointing to an intege
 
 ## Lecture 5: Arrays, Strings, and Structures
 
-To be updated.
+- In C, the function passes a value instead of a reference like in many other languages, so any variables passed in are local within the function scope, except for pointers.
+- The variable name of an array (for example, `a`) is a pointer to the first element of the array. Using this property, we can modify the structure in the first element of the array by passing the array name to the function.
+- Strings are just arrays of characters that end with a null terminator `\0`. This terminator is not shown when printed, but it is worth noting that the behavior of strings is similar to that of arrays.
 
 ---
 
