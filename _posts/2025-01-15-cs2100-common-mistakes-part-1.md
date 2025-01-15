@@ -31,7 +31,7 @@ As you read this blog, you may realize that I am taking the CS 2K Trinity Module
 
 ## Lecture 4: Pointers and Functions
 
-To be updated.
+We can declare a variable `int *p`, which is a pointer `p` pointing to an integer value. Likewise, `int **q` is a double pointer. Here, `q` is a pointer that points to a pointer that points to an integer value. For example, we can assign `q = &p`. The tricky part is when we dereference the double pointer. `*q` will point to `p`, but `**q` will point to the value that `p` is pointing to.
 
 ---
 
