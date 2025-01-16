@@ -47,7 +47,18 @@ We can declare a variable `int *p`, which is a pointer `p` pointing to an intege
 
 ## Lecture 7: MIPS I (Introduction)
 
-To be updated.
+- Every line in assembly code corresponds one-to-one with a line in the binary code.
+- Program variables are assigned to registers by compilers, not the programmers.
+- Registers don't have data types like memory, and assembly could be considered a weakly typed language in this course.
+- The MIPS processor has 32 registers, each 32 bits wide, while the immediate operand (constant) in the `addi` instruction is a 16-bit two's complement value (ranging from $-2^{15}$ to $2^{15} - 1$).
+- Shifting $n$ bits left or right multiplies or divides bit values by $2^n$ (not to be confused with just $n$). If the results from bit shifting are zero, it could be due to the original bits being zeros or the shift size being at least the number of bits.
+- Below are some useful instructions for performing operations that are not explicitly in the instruction set:
+  - `sll` for multiplication
+  - `srl` for division
+  - `and` for masking
+  - `or` for setting bits to 1
+  - `nor`/`xor` for `not`
+- A tip for adding a large constant (more than 16 bits for an immediate operand) is to use the `lui` instruction to set the first 16 bits (initializing the rest as zero), then use `ori` on that register to set the last 16 bits (while leaving the first 16 bits unchanged).
 
 ---
 
