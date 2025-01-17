@@ -4,7 +4,7 @@ tags: NUS-Courses
 
 # CS2100 Common Mistakes Part 1
 
-> We learn from failure, not from success!
+> _"We learn from failure, not from success!"_
 >
 > — _Bram Stoker_
 

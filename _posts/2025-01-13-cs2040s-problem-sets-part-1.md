@@ -4,7 +4,7 @@ tags: NUS-Courses
 
 # CS2040S Probem Sets Part 1
 
-> If you need your software to run twice as fast, hire better programmers. But if you need your software to run more than twice as fast, use a better algorithm.
+> _"If you need your software to run twice as fast, hire better programmers. But if you need your software to run more than twice as fast, use a better algorithm."_
 >
 > — _Software Lead at Microsoft (Cited from the Lecture)_
 
