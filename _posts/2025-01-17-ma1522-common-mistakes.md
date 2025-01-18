@@ -33,7 +33,7 @@ Like other series of courses I take in this semester, I note some of the mistake
 - $\mathbf{A}\mathbf{x} = \mathbf{b}$ has a unique solution when $\mathbf{U}\mathbf{x} = \mathbf{y}$ has a unique solution, which occurs when $\mathbf{U}$ is invertible, since $\mathbf{L}$ is always invertible.
 - The determinant of a triangular matrix is equal to the product of the entries along its diagonal.
 - If a square matrix has two identical rows/columns or if one row/column is a scalar multiple of another, the determinant is zero.
-- **Equivalent Statements of Invertibility**: For a square matrix $\mathbf{A}$ of order $n$, the following statements are equivalent, meaning each one implies the others:
+- **Equivalent Statements of Invertibility**: For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are equivalent, meaning each one implies the others:
   1. $\mathbf{A}$ is invertible.
   2. $\mathbf{A}^T$ is invertible.
   3. $\mathbf{A}$ has a left-inverse.

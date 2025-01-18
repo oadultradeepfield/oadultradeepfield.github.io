@@ -64,7 +64,11 @@ We can declare a variable `int *p`, which is a pointer `p` pointing to an intege
 
 ## Lecture 8: MIPS II (More Instructions)
 
-To be updated.
+- MIPS memory is 32 bits wide, allowing the processor to address $2^{32}$ locations, each holding 1 byte of data. Since words are 32 bits wide, each consecutive word occupies 4 addresses (4 bytes) and must be aligned.
+- The `lw` (load word) instruction reads values from right to left, while the `sw` (store word) instruction writes values from left to right.
+- The `slt` (set if less than) instruction sets the value to 1 if the condition is satisfied and to 0 otherwise.
+- Labels are not instructions; they are pointers and do not consume memory.
+- Be aware that the final loop iteration will also execute to check the condition, so the number of executed instructions is often off by one.
 
 ---
 
