@@ -26,6 +26,8 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 8. $\mathbf{A}\mathbf{x} = \mathbf{b}$ has a unique solution (and thus consistent).
 9. $\det(\mathbf{A})\neq 0$.
 10. The columns/rows of $\mathbf{A}$ are linearly independent, form a basis, and, therefore, span $\mathbb{R}^n$.
+11. $\mathbf{A}$ is full rank, that is $\text{rank}(\textbf{A})=n$.
+12. $\text{nullity}(A)=0$.
 
 ---
 
@@ -64,7 +66,7 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 - A set of vectors is linearly independent if and only if the homogeneous system, with the vectors as the columns of the coefficient matrix, has only the trivial solution.
 - **Some Special Cases**: The empty set is linearly independent, and a set containing a single vector $\mathbf{v}$ is linearly independent if and only if $\mathbf{v} \neq \mathbf{0}$. The span of all zero vectors is the only case where the span forms a single point (the zero vector).
 - Linear dependency is defined on the vector set as a whole (when there are more than two vectors) because if one vector can be expressed as a linear combination of the others, arithmetic operations on the vectors can yield similar results.
-- The dimension of a subspace is determined by the minimum number of vectors needed to form a basis. Note that $\mathbb{R}^2$ is not a subspace of $\mathbb{R}^3$ since it lacks a third coordinate, but we can have a 2D plane that is a two-dimensional subspace of $\mathbb{R}^3$ by setting the third coordinate to 0.
+- The dimension of a subspace is determined by the minimum number of vectors needed to form a basis. Note that $\mathbb{R}^2$ is not a subspace of $\mathbb{R}^3$ since it lacks a third coordinate, but we can have a 2D plane that is a two-dimensional subspace of $\mathbb{R}^3$ by setting the third coordinate to $0$.
 - When expressing coordinates relative to a basis, we always include only as many coordinates as the dimension of the subspace. However, the basis itself should have the same number of entries as the dimension of the superspace.
 - Both REF and RREF have infinitely many solutions if there are non-pivot columns, as these columns correspond to free variables (parameters), which also determine the dimension of the solution space.
 - Conditions to check if $S$ is a basis of subspace $V$ (both requires $\lvert S \rvert = \text{dim}(V)$):
@@ -77,7 +79,25 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 
 ## Chapter 4: Subspaces Associated to a Matrix
 
-To be updated.
+- Although an $m \times n$ matrix has $m$ rows and $n$ columns, the row space is a subspace of $\mathbb{R}^n$ (with $n$ coordinates), while the column space is a subspace of $\mathbb{R}^m$ (with $m$ coordinates).
+- The non-zero rows of the RREF of $\mathbf{A}$ form a basis for $\text{Row}(\mathbf{A})$. However, the corresponding pivot columns of the RREF of $\mathbf{A}$ (denoted as $\mathbf{R}$) form a basis for $\text{Col}(\mathbf{A})$ (it is not preserved under row operations).
+- The nullspace of $\mathbf{A}$ is the solution space of $\mathbf{A}\mathbf{x} = \mathbf{0}$. The nullity of $\mathbf{A}$ is the dimension of its nullspace, which is essentially the same as number of non-pivot columns its in RREF.
+- $\text{rank}(\mathbf{A})=\text{dim}(\text{Col}(\mathbf{A}))=\text{dim}(\text{Row}(\mathbf{A}))$ and is preserved under transpose.
+- $\text{Col}(\mathbf{AB})\subseteq \text{Col}(\mathbf{A})$, $\text{Rank}(\mathbf{AB})\leq \text{min}(\text{rank}(\textbf{A}), \text{rank}(\textbf{B}))$, and $\text{rank}(A)+\text{nullity}(\mathbf{A})=n$ for $m\times n$ matrix.
+- For an $m \times n$ matrix $\mathbf{A}$, the following are equivalent:
+  1. $\mathbf{A}$ is full rank: $\text{rank}(\mathbf{A}) = n$.
+  2. The rows of $\mathbf{A}$ span $\mathbb{R}^n$: $\text{Row}(\mathbf{A}) = \mathbb{R}^n$.
+  3. The columns of $\mathbf{A}$ are linearly independent.
+  4. The homogeneous system $\mathbf{Ax = 0}$ has only the trivial solution: $\text{Null}(\mathbf{A}) = \{\mathbf{0}\}$.
+  5. $\mathbf{A}^T \mathbf{A}$ is an invertible matrix of order $n$.
+  6. $\mathbf{A}$ has a left inverse.
+- For an $m \times n$ matrix $\mathbf{A}$, the following are equivalent:
+  1. $\mathbf{A}$ is full rank: $\text{rank}(\mathbf{A}) = m$.
+  2. The columns of $\mathbf{A}$ span $\mathbb{R}^m$: $\text{Col}(A) = \mathbb{R}^m$.
+  3. The rows of $\mathbf{A}$ are linearly independent.
+  4. The system $\mathbf{Ax = b}$ is consistent for all $\mathbf{b} \in \mathbb{R}^m$.
+  5. $\mathbf{A} \mathbf{A}^T$ is an invertible matrix of order $m$.
+  6. $\mathbf{A}$ has a right inverse.
 
 ---
 
