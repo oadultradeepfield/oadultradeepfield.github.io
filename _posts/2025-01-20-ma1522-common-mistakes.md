@@ -103,9 +103,13 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 
 ## Chapter 5: Orthogonality and Least Square Solution
 
-To be updated.
-
----
+- A set of vectors is **orthogonal** if they are pairwise orthogonal (i.e., their dot product is zero). They are **orthonormal** if they are orthogonal and all vectors in the set are unit vectors.
+- If a subspace $V$ is defined by a linear equation, the vector orthogonal to $V$ consists of those that are multiples of the coefficients of the equation.
+- Any orthogonal set of nonzero vectors is linearly independent (but not vice versa).
+- A matrix $\mathbf{A}$ is orthogonal if $\mathbf{A}^T = \mathbf{A}^{-1}$. Equivalently, $\mathbf{A}^T \mathbf{A} = \mathbf{I} = \mathbf{A} \mathbf{A}^T$, meaning the columns and rows of $\mathbf{A}$ form an **orthonormal** basis for $\mathbb{R}^n$.
+- If we can express $\mathbf{v} = c_1 \mathbf{u}_1 + c_2 \mathbf{u}_2 + \dots + c_k \mathbf{u}_k$, where the set of vectors $\mathbf{u}_i$ is an orthogonal basis, remember that each component $c_i$ is $$\frac{\mathbf{v} \cdot \mathbf{u}_i}{\|\mathbf{u}_i\|^2}.$$ In this case, we also call $\mathbf{v}$ the orthogonal projection of some vector $\mathbf{w}$, where $\mathbf{w} = \mathbf{v} + \mathbf{w}_n$ and $\mathbf{w}_n$ is orthogonal to the subspace that $\mathbf{v}$ is in. It is also true that $\mathbf{v}$ is the vector in the subspace that is closest to $\mathbf{w}$.
+- **Gram-Schmidt Orthogonalization**: Let $\mathbf{u}_i$ be an element in the linearly independent set. We can create an orthonormal set of $\mathbf{v}_i$ by using $$\mathbf{v}_k = \mathbf{u}_k - \sum_{i=1}^{k-1} \left( \frac{\mathbf{v}_i \cdot \mathbf{u}_k}{\|\mathbf{v}_i\|^2} \right) \mathbf{v}_i,$$ where $\mathbf{v}_1 = \mathbf{u}_1$. There can be a trick question where $\mathbf{v}_k$ is $\mathbf{0}$ but $\mathbf{v}_{k-1}$ is not. In this case, it indicates that $\mathbf{u}_k$ is not part of a linearly independent set, since we can form $\mathbf{u}_k$ as a linear combination of the previous elements.
+- To be updated.
 
 ## Chapter 6: Eigenanalysis
 
