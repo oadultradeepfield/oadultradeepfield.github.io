@@ -4,9 +4,9 @@ tag: NUS-Courses
 
 # MA1522 Common Mistakes
 
-> _"Life is a linear equation in which you can't cross multiply! If you think you can do it, you can do it. If you think you can't do it, you can't do it."_
+> \_"Life is a linear equation in which you can't cross multiply! If you think you can do it, you can do it. If you think you can't do it, you can't do it."\_
 >
-> — _Israelmore Ayivor_
+> — \_Israelmore Ayivor\_
 
 Like other series of courses I take in this semester, I note some of the mistakes I made i.e. misconception or some tricky terms here to help me revise faster during the exam period.
 
@@ -33,7 +33,7 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 
 ## Chapter 1: Linear Systems
 
-- A standard equation is written in the form $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$ (with variables on one side and the constant on the other).
+- A standard equation is written in the form $a\_1x\_1 + a\_2x\_2 + \dots + a\_nx\_n = b$ (with variables on one side and the constant on the other).
 - A linear system is **inconsistent** if there is no solution and **consistent** if it has at least one solution.
 - For 3D linear systems, there are no solutions if at least two of the planes are parallel, or if all three planes intersect but do not form a single line. A unique solution occurs when two of the planes intersect as lines, and those lines intersect at a single point.
 - Based on the above, the system has infinitely many solutions (a general solution) with one parameter if the three planes intersect along a line, and with two parameters if the planes coincide.
@@ -46,10 +46,10 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 
 - In this course, a zero matrix can be categorized as a triangular matrix, diagonal matrix, and scalar matrix, as the definitions of these types do not require the diagonal or triangular elements to be nonzero.
 - A symmetric matrix $\mathbf{A}$ satisfies the property $\mathbf{A} = \mathbf{A}^T$, and $\mathbf{A}^n$ is also symmetric (but not necessarily true for the converse).
-- Every elementary matrix is invertible, and its inverse corresponds to reversing the row operation performed on $\mathbf{I}_n$ to obtain the elementary matrix.
+- Every elementary matrix is invertible, and its inverse corresponds to reversing the row operation performed on $\mathbf{I}\_n$ to obtain the elementary matrix.
 - To get the product $\mathbf{E}\mathbf{A}$, note that the size of $\mathbf{E}$ should be $m \times m$ if $\mathbf{A}$ is $m \times n$.
-- If $\mathbf{A} \xrightarrow{r_1} \xrightarrow{r_2} \dots \xrightarrow{r_k} \mathbf{B}$, then $\mathbf{B} = \mathbf{E}_k \dots \mathbf{E}_2 \mathbf{E}_1 \mathbf{A}$, which implies $\mathbf{A} = \mathbf{E}_1^{-1} \mathbf{E}_2^{-1} \dots \mathbf{E}_k^{-1} \mathbf{B}$, or equivalently, $\mathbf{B} \xrightarrow{r_k'} \dots \xrightarrow{r_2'} \xrightarrow{r_1'} \mathbf{A}$.
-- To quickly obtain $\mathbf{L}$ after reducing $\mathbf{A}$ to $\mathbf{U}$, we can perform only the row operation $R_i + cR_j$ for $i > j$. We can then replace the $(i,j)$ entry of $\mathbf{L}$ with the value of $-c$.
+- If $\mathbf{A} \xrightarrow{r\_1} \xrightarrow{r\_2} \dots \xrightarrow{r\_k} \mathbf{B}$, then $\mathbf{B} = \mathbf{E}\_k \dots \mathbf{E}\_2 \mathbf{E}\_1 \mathbf{A}$, which implies $\mathbf{A} = \mathbf{E}\_1^{-1} \mathbf{E}\_2^{-1} \dots \mathbf{E}\_k^{-1} \mathbf{B}$, or equivalently, $\mathbf{B} \xrightarrow{r\_k'} \dots \xrightarrow{r\_2'} \xrightarrow{r\_1'} \mathbf{A}$.
+- To quickly obtain $\mathbf{L}$ after reducing $\mathbf{A}$ to $\mathbf{U}$, we can perform only the row operation $R\_i + cR\_j$ for $i > j$. We can then replace the $(i,j)$ entry of $\mathbf{L}$ with the value of $-c$.
 - $\mathbf{A}\mathbf{x} = \mathbf{b}$ has a unique solution when $\mathbf{U}\mathbf{x} = \mathbf{y}$ has a unique solution, which occurs when $\mathbf{U}$ is invertible, since $\mathbf{L}$ is always invertible.
 - The determinant of a triangular matrix is equal to the product of the entries along its diagonal.
 - If a square matrix has two identical rows/columns or if one row/column is a scalar multiple of another, the determinant is zero.
@@ -107,8 +107,8 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 - If a subspace $V$ is defined by a linear equation, the vector orthogonal to $V$ consists of those that are multiples of the coefficients of the equation.
 - Any orthogonal set of nonzero vectors is linearly independent (but not vice versa).
 - A matrix $\mathbf{A}$ is orthogonal if $\mathbf{A}^T = \mathbf{A}^{-1}$. Equivalently, $\mathbf{A}^T \mathbf{A} = \mathbf{I} = \mathbf{A} \mathbf{A}^T$, meaning the columns and rows of $\mathbf{A}$ form an **orthonormal** basis for $\mathbb{R}^n$.
-- If we can express $\mathbf{v} = c_1 \mathbf{u}_1 + c_2 \mathbf{u}_2 + \dots + c_k \mathbf{u}_k$, where the set of vectors $\mathbf{u}_i$ is an orthogonal basis, remember that each component $c_i$ is $\frac{\mathbf{v} \cdot \mathbf{u}_i}{\|\mathbf{u}_i\|^2}.$ In this case, we also call $\mathbf{v}$ the orthogonal projection of some vector $\mathbf{w}$, where $\mathbf{w} = \mathbf{v} + \mathbf{w}_n$ and $\mathbf{w}_n$ is orthogonal to the subspace that $\mathbf{v}$ is in. It is also true that $\mathbf{v}$ is the vector in the subspace that is closest to $\mathbf{w}$.
-- **Gram-Schmidt Orthogonalization**: Let $\mathbf{u} _i$ be an element in the linearly independent set. We can create an orthonormal set of $\mathbf{v} _i$ by using $\mathbf{v} _k = \mathbf{u} _k-\sum _{i=1}^{k-1}\frac{\mathbf{v} _i\cdot\mathbf{u} _k}{\Vert\mathbf{v} _i\Vert^2} \mathbf{v} _i$, where $\mathbf{v} _1 = \mathbf{u} _1$. There can be a trick question where $\mathbf{v} _k$ is $\mathbf{0}$ but $\mathbf{v} _{k-1}$ is not. In this case, it indicates that $\mathbf{u} _k$ is not part of a linearly independent set, since we can form $\mathbf{u} _k$ as a linear combination of the previous elements.
+- If we can express $\mathbf{v} = c\_1 \mathbf{u}\_1 + c\_2 \mathbf{u}\_2 + \dots + c\_k \mathbf{u}\_k$, where the set of vectors $\mathbf{u}\_i$ is an orthogonal basis, remember that each component $c\_i$ is $\frac{\mathbf{v} \cdot \mathbf{u}\_i}{\|\mathbf{u}\_i\|^2}.$ In this case, we also call $\mathbf{v}$ the orthogonal projection of some vector $\mathbf{w}$, where $\mathbf{w} = \mathbf{v} + \mathbf{w}\_n$ and $\mathbf{w}\_n$ is orthogonal to the subspace that $\mathbf{v}$ is in. It is also true that $\mathbf{v}$ is the vector in the subspace that is closest to $\mathbf{w}$.
+- **Gram-Schmidt Orthogonalization**: Let $\mathbf{u} \_i$ be an element in the linearly independent set. We can create an orthonormal set of $\mathbf{v} \_i$ by using $\mathbf{v} \_k = \mathbf{u} \_k-\sum \_{i=1}^{k-1}\frac{\mathbf{v} \_i\cdot\mathbf{u} \_k}{\Vert\mathbf{v} \_i\Vert^2} \mathbf{v} \_i$, where $\mathbf{v} \_1 = \mathbf{u} \_1$. There can be a trick question where $\mathbf{v} \_k$ is $\mathbf{0}$ but $\mathbf{v} \_{k-1}$ is not. In this case, it indicates that $\mathbf{u} \_k$ is not part of a linearly independent set, since we can form $\mathbf{u} \_k$ as a linear combination of the previous elements.
 - To be updated.
 
 ## Chapter 6: Eigenanalysis
