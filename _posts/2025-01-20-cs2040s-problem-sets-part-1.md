@@ -139,6 +139,32 @@ public static boolean isFeasibleLoad(int[] jobSizes, int queryLoad, int p) {
 
 The first `if` block is used to handle invalid input and is not directly related to the main logic. The key idea is to initialize the number of used processors to be at least 1, since we will always use a processor after handling the case where `p=0`. We then iterate through the job sizes and check if each job can be assigned to the current processor. The base condition is that each job should not exceed the maximum allowed load. If the sum of jobs for the current processor exceeds the query load, we move the job to the next processor. The final condition checks if the number of processors used ever exceeds the total number of available processors.
 
+---
+
 ## PS3: The Sorting Detectives
+
+To be updated.
+
+---
+
+## Contest 1: Treasure Island
+
+To be updated.
+
+---
+
+## PS4: Scapegoat Trees
+
+To be updated.
+
+---
+
+## PS5: Autocomplete
+
+To be updated.
+
+---
+
+## PS6: Automatic Writing
 
 To be updated.
