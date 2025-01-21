@@ -4,9 +4,9 @@ tag: NUS-Courses
 
 # MA1522 Common Mistakes
 
-> \_"Life is a linear equation in which you can't cross multiply! If you think you can do it, you can do it. If you think you can't do it, you can't do it."\_
+> _"Life is a linear equation in which you can't cross multiply! If you think you can do it, you can do it. If you think you can't do it, you can't do it."_
 >
-> — \_Israelmore Ayivor\_
+> — _Israelmore Ayivor_
 
 Like other series of courses I take in this semester, I note some of the mistakes I made i.e. misconception or some tricky terms here to help me revise faster during the exam period.
 
