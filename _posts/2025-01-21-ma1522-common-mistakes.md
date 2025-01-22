@@ -109,7 +109,10 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 - A matrix $\mathbf{A}$ is orthogonal if $\mathbf{A}^T = \mathbf{A}^{-1}$. Equivalently, $\mathbf{A}^T \mathbf{A} = \mathbf{I} = \mathbf{A} \mathbf{A}^T$, meaning the columns and rows of $\mathbf{A}$ form an **orthonormal** basis for $\mathbb{R}^n$.
 - If we can express $\mathbf{v} = c\_1 \mathbf{u}\_1 + c\_2 \mathbf{u}\_2 + \dots + c\_k \mathbf{u}\_k$, where the set of vectors $\mathbf{u}\_i$ is an orthogonal basis, remember that each component $c\_i$ is $\frac{\mathbf{v} \cdot \mathbf{u}\_i}{\Vert\mathbf{u}\_i\Vert^2}.$ In this case, we also call $\mathbf{v}$ the orthogonal projection of some vector $\mathbf{w}$, where $\mathbf{w} = \mathbf{v} + \mathbf{w}\_n$ and $\mathbf{w}\_n$ is orthogonal to the subspace that $\mathbf{v}$ is in. It is also true that $\mathbf{v}$ is the vector in the subspace that is closest to $\mathbf{w}$.
 - **Gram-Schmidt Orthogonalization**: Let $\mathbf{u} \_i$ be an element in the linearly independent set. We can create an orthonormal set of $\mathbf{v} \_i$ by using $\mathbf{v} \_k = \mathbf{u} \_k-\sum \_{i=1}^{k-1}\frac{\mathbf{v} \_i\cdot\mathbf{u} \_k}{\Vert\mathbf{v} \_i\Vert^2} \mathbf{v} \_i$, where $\mathbf{v} \_1 = \mathbf{u} \_1$. There can be a trick question where $\mathbf{v} \_k$ is $\mathbf{0}$ but $\mathbf{v} \_{k-1}$ is not. In this case, it indicates that $\mathbf{u} \_k$ is not part of a linearly independent set, since we can form $\mathbf{u} \_k$ as a linear combination of the previous elements.
-- To be updated.
+- If a matrix $\mathbf{A}$ has a linearly independent columns, it can be factorized into $\mathbf{QR}$ where $\mathbf{Q}$ is a **orthonormal** columns and $\mathbf{R}=\mathbf{Q}^T\mathbf{A}$ is an upper triangular matrix with positive diagonal entries. Note that each column in $\mathbf{A}$ is also a multiple of the same column in $\mathbf{Q}$.
+- A vector $\mathbf{u}$ is a least square solution to $\mathbf{Ax}=\mathbf{b}\iff \mathbf{u}$ is a solution to $\mathbf{A}^T\mathbf{Ax}=\mathbf{A}^T\mathbf{b}$, which is not guaranteed to be unique, but the projection $\mathbf{Au}=\mathbf{A}(\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T\mathbf{b}$ (to $\text{Col}(\mathbf{A})$) is unique. 
+
+---
 
 ## Chapter 6: Eigenanalysis
 
