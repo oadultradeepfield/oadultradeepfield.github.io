@@ -72,15 +72,12 @@ We can declare a variable `int *p`, which is a pointer `p` pointing to an intege
 
 ---
 
-## Lecture 9: MIPS III (Instruction Formats and Encoding)
+## Lecture 9: MIPS III (Instruction Formats and Encoding) and Lecture 10: Instruction Set Architecture
 
-To be updated.
-
----
-
-## Lecture 10: Instruction Set Architecture
-
-To be updated.
+- Beware that the **Program Counter (PC)** stores the address of the next instruction to be executed, not the current one.
+- To maximize the number of instructions in a fixed-length instruction set, consider maximizing the length of the longer instructions. This can be achieved by allowing the shorter instructions to occupy only one value (e.g., `0..000`) and using the remaining bit patterns for the longer instructions.
+- To minimize the number of instructions, we maximize the shorter instructions. This typically results in the shorter instructions being one less than the longer ones, allowing us to distinguish between the two types.
+- **Accumulator-based** and **stack-based architectures** use implicit operands, while **register-based architectures** like MIPS use explicit operands. **Memory-memory architectures** store everything in memory.
 
 ---
 

@@ -26,8 +26,9 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 8. $\mathbf{A}\mathbf{x} = \mathbf{b}$ has a unique solution (and thus consistent).
 9. $\det(\mathbf{A})\neq 0$.
 10. The columns/rows of $\mathbf{A}$ are linearly independent, form a basis, and, therefore, span $\mathbb{R}^n$.
-11. $\mathbf{A}$ is full rank, that is $\text{rank}(\textbf{A})=n$.
+11. $\mathbf{A}$ is full rank, that is $\text{rank}(\mathbf{A})=n$.
 12. $\text{nullity}(A)=0$.
+13. 0 is not an eigenvalue of $\mathbf{A}$.
 
 ---
 
@@ -83,7 +84,7 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 - The non-zero rows of the RREF of $\mathbf{A}$ form a basis for $\text{Row}(\mathbf{A})$. However, the corresponding pivot columns of the RREF of $\mathbf{A}$ (denoted as $\mathbf{R}$) form a basis for $\text{Col}(\mathbf{A})$ (it is not preserved under row operations).
 - The nullspace of $\mathbf{A}$ is the solution space of $\mathbf{A}\mathbf{x} = \mathbf{0}$. The nullity of $\mathbf{A}$ is the dimension of its nullspace, which is essentially the same as number of non-pivot columns its in RREF.
 - $\text{rank}(\mathbf{A})=\text{dim}(\text{Col}(\mathbf{A}))=\text{dim}(\text{Row}(\mathbf{A}))$ and is preserved under transpose.
-- $\text{Col}(\mathbf{AB})\subseteq \text{Col}(\mathbf{A})$, $\text{Rank}(\mathbf{AB})\leq \text{min}(\text{rank}(\textbf{A}), \text{rank}(\textbf{B}))$, and $\text{rank}(A)+\text{nullity}(\mathbf{A})=n$ for $m\times n$ matrix.
+- $\text{Col}(\mathbf{AB})\subseteq \text{Col}(\mathbf{A})$, $\text{Rank}(\mathbf{AB})\leq \text{min}(\text{rank}(\mathbf{A}), \text{rank}(\mathbf{B}))$, and $\text{rank}(A)+\text{nullity}(\mathbf{A})=n$ for $m\times n$ matrix.
 - For an $m \times n$ matrix $\mathbf{A}$, the following are equivalent:
   1. $\mathbf{A}$ is full rank: $\text{rank}(\mathbf{A}) = n$.
   2. The rows of $\mathbf{A}$ span $\mathbb{R}^n$: $\text{Row}(\mathbf{A}) = \mathbb{R}^n$.
@@ -116,7 +117,13 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 
 ## Chapter 6: Eigenanalysis
 
-To be updated.
+- The characteristic polynomial of $\mathbf{A}$, denoted as $\text{char}(\mathbf{A}) = \det(x\mathbf{I} - \mathbf{A})$, is used to determine the eigenvalues. An eigenvalue $\lambda$ is a root of this polynomial, implying that $(\lambda \mathbf{I} - \mathbf{A})\mathbf{x} = \mathbf{0}$ has nontrivial solutions.
+- The algebraic multiplicity of $\lambda$ is the largest integer $r\_\lambda$ such that $\det(x\mathbf{I} - \mathbf{A}) = (x - \lambda)^{r_\lambda}p(x)$ for some polynomial $p(x)$, where $\lambda$ is not a root of $p(x)$.
+- If $\text{char}(\mathbf{A})$ can be factored into linear terms, the roots of the polynomial are the eigenvalues.
+- The eigenvalues of a triangular matrix are its diagonal entries. The algebraic multiplicity of each eigenvalue is the number of times it appears on the diagonal.
+- The geometric multiplicity $\dim(E\_\lambda)$ of an eigenvalue $\lambda$ is the dimension of its associated eigenspace. Each eigenspace is linearly independent, and $1 \leq \dim(E\_\lambda) \leq r\_\lambda$.
+- A square matrix $\mathbf{A}$ is diagonalizable, $\mathbf{A} = \mathbf{PDP}^{-1}$, if it has $n$ linearly independent eigenvectors. $\mathbf{D}$ is a diagonal matrix with the eigenvalues as its diagonal entries, and $\mathbf{P}$ contains the corresponding eigenvectors as its columns.
+- If $\mathbf{A}$ is diagonalizable, then the geometric multiplicity equals the algebraic multiplicity for each eigenvalue.
 
 ---
 
