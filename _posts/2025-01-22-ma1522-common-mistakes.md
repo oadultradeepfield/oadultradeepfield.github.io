@@ -124,6 +124,16 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 - The geometric multiplicity $\dim(E\_\lambda)$ of an eigenvalue $\lambda$ is the dimension of its associated eigenspace. Each eigenspace is linearly independent, and $1 \leq \dim(E\_\lambda) \leq r\_\lambda$.
 - A square matrix $\mathbf{A}$ is diagonalizable, $\mathbf{A} = \mathbf{PDP}^{-1}$, if it has $n$ linearly independent eigenvectors. $\mathbf{D}$ is a diagonal matrix with the eigenvalues as its diagonal entries, and $\mathbf{P}$ contains the corresponding eigenvectors as its columns.
 - If $\mathbf{A}$ is diagonalizable, then the geometric multiplicity equals the algebraic multiplicity for each eigenvalue.
+- **Spectral Theorem**: $\mathbf{A}$ is orthogonally diagonalizable ($\mathbf{A} = \mathbf{PDP}^T$) **if and only if** $\mathbf{A}$ is symmetric. The eigenspaces of $\mathbf{A}$ are orthogonal.
+- **Power of a Diagonalizable Matrix**: $\mathbf{A}^m = \mathbf{PD}^m\mathbf{P}^{-1}$, where $\mathbf{D}^m$ is obtained by raising each diagonal entry of $\mathbf{D}$ to the power of $m$. This applies to $m = -1$ (inverse) as well.
+- A steady-state (equilibrium) vector for a stochastic matrix $\mathbf{P}$ is a probability vector that is an eigenvector associated with eigenvalue 1. If a Markov chain converges, it converges to this vector.
+- To compute the equilibrium vector, find the eigenvector $\mathbf{u}$ associated with eigenvalue 1, then normalize it: $\mathbf{v} = \frac{\mathbf{u}}{\sum_{k=1}^n u\_k}$.
+- The eigenvalues $\mu\_i$ of $\mathbf{A}^T\mathbf{A}$ are nonnegative. The singular values of $\mathbf{A}$ are $\sigma\_i = \sqrt{\mu\_i}$. When ordered in decreasing order, these are the diagonal entries of $\mathbf{\Sigma}$.
+- **Singular Value Decomposition (SVD)**: $\mathbf{A} = \mathbf{U\Sigma V}^T$.
+  1. Compute the eigenvalues of $\mathbf{A}^T\mathbf{A}$. For eigenvalues with algebraic multiplicity greater than one, repeat them on the diagonal of $\mathbf{\Sigma}$.
+  2. $\mathbf{V}$ consists of orthonormal eigenvectors of $\mathbf{A}^T\mathbf{A}$.
+  3. Compute $\mathbf{u}\_i = \mathbf{A}\mathbf{v}\_i / \sigma\_i$.
+  4. If the set of $\mathbf{u}_i$ does not form an orthonormal basis ($r \neq m$), extend it to complete the basis.
 
 ---
 
