@@ -84,7 +84,9 @@ We can declare a variable `int *p`, which is a pointer `p` pointing to an intege
 ## Lecture 11: Processor: Datapath and Lecture 12: Processor: Control
 
 - This visualization is very helpful for Lectures 11 and 12.
+
   ![Full Datapath Summary](/img/nus_courses/datapath.png)
+
 - The stages of instruction execution are summarized as follows:
 
   1. **Fetch**: The instruction is fetched from memory using the program counter (PC) and placed into a register. The output is a 32-bit binary instruction.
@@ -99,7 +101,5 @@ We can declare a variable `int *p`, which is a pointer `p` pointing to an intege
 - `ALUSrc` is used to choose the second operand from either `RD2` or the sign-extended immediate, not from `RD1`.
 - In `PCSrc`, the output `isZero` from the ALU is set to 1 when the ALU output is zero (not set to 0).
 - The `ALUOp` is involved only in `ALUControl`, not in `ALUSrc`.
-
----
 
 In a nutshell, I might not include part 2 of this series here due to limited time for note-taking, and instead, focus on practice questions. However, this blog will remain published for anyone learning this in the future, as it may help make the course easier in some ways. Thanks for reading!
