@@ -2,7 +2,7 @@
 tag: NUS-Courses
 ---
 
-# MA1522 Common Mistakes
+# Useful Stuffs from MA1522
 
 > _"Life is a linear equation in which you can't cross multiply! If you think you can do it, you can do it. If you think you can't do it, you can't do it."_
 >
@@ -29,6 +29,7 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 11. $\mathbf{A}$ is full rank, that is $\text{rank}(\mathbf{A})=n$.
 12. $\text{nullity}(A)=0$.
 13. 0 is not an eigenvalue of $\mathbf{A}$.
+14. The linear transformation $T$ defined by $T\_{\mathbf{A}}(\mathbf{v})=\mathbf{Av}$ is both injective and surjective.
 
 ---
 
@@ -92,6 +93,7 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
   4. The homogeneous system $\mathbf{Ax = 0}$ has only the trivial solution: $\text{Null}(\mathbf{A}) = \text{set}(\mathbf{0})$.
   5. $\mathbf{A}^T \mathbf{A}$ is an invertible matrix of order $n$.
   6. $\mathbf{A}$ has a left inverse.
+  7. [The linear transformation with $\mathbf{A}$ as the standard matrix is injective.](#chapter-7-linear-transformation)
 - For an $m \times n$ matrix $\mathbf{A}$, the following are equivalent:
   1. $\mathbf{A}$ is full rank: $\text{rank}(\mathbf{A}) = m$.
   2. The columns of $\mathbf{A}$ span $\mathbb{R}^m$: $\text{Col}(A) = \mathbb{R}^m$.
@@ -99,6 +101,7 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
   4. The system $\mathbf{Ax = b}$ is consistent for all $\mathbf{b} \in \mathbb{R}^m$.
   5. $\mathbf{A} \mathbf{A}^T$ is an invertible matrix of order $m$.
   6. $\mathbf{A}$ has a right inverse.
+  7. [The linear transformation with $\mathbf{A}$ as the standard matrix is surjective.](#chapter-7-linear-transformation)
 
 ---
 
@@ -139,4 +142,11 @@ For a **square matrix** $\mathbf{A}$ of order $n$, the following statements are 
 
 ## Chapter 7: Linear Transformation
 
-To be updated.
+- A mapping $T:\mathbb{R}^n\to\mathbb{R}^m$ is a linear transformation $\iff T(\alpha \mathbf{u} + \beta \mathbf{v}) = \alpha T(\mathbf{u}) + \beta T(\mathbf{v})$. We call $\mathbb{R}^n$ the domain and $\mathbb{R}^m$ the codomain. In general, this can be extended to a set of vectors.
+- There are many properties of linearity; an easy way to test it is to check whether it maps $\mathbf{0}\_n$ to $\mathbf{0}\_m$. Specifically, if $T(\mathbf{0}\_n) \neq \mathbf{0}\_m$, then the transformation is not linear.
+- A linear transformation exists if we can express $T(\mathbf{u}) = \mathbf{A}\mathbf{u}$. The columns of $\mathbf{A}$ correspond to the images of the standard basis vectors for $\mathbb{R}^n$. The matrix $\mathbf{A}$ is referred to as the standard matrix or the matrix representation of $T$.
+- If the standard basis is not used, the image can still be constructed using the relationship $T(\mathbf{v}) = [T]\_S [\mathbf{v}]\_S$. If $\mathbf{P}$ is the transition matrix from the standard basis to $S$, then $\mathbf{A} = [T]\_S \mathbf{P}$.
+- The range of $T$ is the column space of its associated standard matrix $\mathbf{A}$: $\text{Col}(\mathbf{A})$. The rank of $T$ is the dimension of its range, which is equal to $\text{rank}(\mathbf{A})$.
+- The kernel of $T$ is the set of all vectors whose images under $T$ are $\mathbf{0}$. This is the same as the nullspace of $\mathbf{A}$: $\text{Null}(\mathbf{A})$. The dimension of the kernel is referred to as the nullity.
+- A linear transformation is injective if $\text{ker}(T) = \text{set}(\mathbf{0})$, meaning that the equation $\mathbf{Ax} = \mathbf{0}$ has only the trivial solution.
+- A linear transformation is surjective if its range is equal to its codomain. The transformation that maps the larger to smaller spaces is always surjective.
