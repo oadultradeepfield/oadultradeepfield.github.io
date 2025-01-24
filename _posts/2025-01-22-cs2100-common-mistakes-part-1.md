@@ -83,7 +83,19 @@ We can declare a variable `int *p`, which is a pointer `p` pointing to an intege
 
 ## Lecture 11: Processor: Datapath
 
-To be updated.
+- The stages of instruction execution are summarized as follows:
+
+  1. **Fetch**: The instruction is fetched from memory using the program counter (PC) and placed into a register. The output is a 32-bit binary instruction.
+  2. **Decode**: The opcode, registers, and related fields are extracted from the binary instruction. The data from the registers are also forwarded to the next step. The output consists of the operands for the ALU.
+  3. **ALU**: This is where the execution takes place. The output is the result of the computation and a 1-bit `isZero` signal, which indicates whether the result is zero.
+  4. **Memory**: The memory address calculated in the previous steps is used to read or write data (applicable only for **load/store** instructions). For other instructions, this stage is bypassed.
+  5. **RegWrite**: The result is written back to the register (other unrelated registers remain unchanged). There is no additional output from this stage.
+
+- The control signal for the multiplexer must handle all possible inputs. For example, 4 inputs require 2 bits to represent them (`00, 01, 10, 11`).
+- The control signal `PCSrc` is `0` when `(PC + 4)` is selected and `1` when `(PC + 4) + (Immediate × 4)` is selected. This selection depends on the `isZero` signal from the ALU for branch instructions.
+- The `ALUControl` signal specifies the operation the ALU needs to perform, while the `ALUSrc` signal determines the source of the second operand.
+
+  ![Full Datapath Summary](/img/nus_courses/datapath.png)
 
 ---
 
