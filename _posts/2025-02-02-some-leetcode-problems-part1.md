@@ -55,10 +55,82 @@ I flag the key line with a comment. The tricky thing is to realize that after yo
 
 ## 155. Min Stack
 
-To be updated.
+This is a medium problem, but it is simpler than we might have thought. The hard part is actually knowing the trick. At some point, we may realize that the problem title is the best hint. We must keep track of the minimum element we find in the stack. Below is how I did it:
+
+```python
+def push(self, val: int) -> None:
+        currentMin = val if not self.stack else min(val, self.stack[-1][1])
+        self.stack.append([val, currentMin])
+```
+
+Unlike an ordinary stack, we store a list of integers instead of an integer. If there is no element in the stack, the element we are adding is the minimum. But if there is, we find the minimum between the current smallest and the input value. Since we push the element on top of the stack in order, it is guaranteed that when popping the pair out, the second entry of each stack element is always the minimum found until that point. Eventually, we can accomplish the task in $O(1)$ time.
 
 ---
 
 ## 98. Validate Binary Search Tree
+
+This problem is another one that requires wishful thinking. Starting from the condition for a binary tree to be a binary search tree. We may note that all elements in the left subtree need to be smaller than the node value, and those on the right need to be larger than the node value. Checking the value on the current node is not enough, as we need to go through all possible nodes. Therefore, we can keep track of the bound of the current subtree to check if it not exceeds:
+
+```python
+def dfs(root, lowerBound, upperBound):
+    if not root:
+        return True
+
+    if not (lowerBound < root.val < upperBound):
+        return False
+
+    # Continue
+```
+
+From the second if block, we already ensure that the current node passes the condition, so we need to check for the left and right subtree if the remaining nodes meet the condition. Therefore, we will return this:
+
+```python
+    return (
+            dfs(root.left, lowerBound, root.val) and
+            dfs(root.right, root.val, upperBound)
+        )
+```
+
+Notice how `dfs` is a helper function. We need to call this function in the main function by setting the lower and upper bound to the values like `float(-inf)` and `float(+inf)` in Python. These two will be continuously updated as we go through each subtree.
+
+---
+
+## 46. Permutations
+
+To be updated.
+
+---
+
+## 39. Combination Sum
+
+To be updated.
+
+---
+
+## 73. Set Matrix Zeroes
+
+To be updated.
+
+---
+
+## 33. Search in Rotated Sorted Array
+
+To be updated.
+
+---
+
+## 56. Merge Intervals
+
+To be updated.
+
+---
+
+## 62. Unique Paths
+
+To be updated.
+
+---
+
+## 198. House Robber
 
 To be updated.
