@@ -59,8 +59,8 @@ This is a medium problem, but it is simpler than we might have thought. The hard
 
 ```python
 def push(self, val: int) -> None:
-        currentMin = val if not self.stack else min(val, self.stack[-1][1])
-        self.stack.append([val, currentMin])
+    currentMin = val if not self.stack else min(val, self.stack[-1][1])
+    self.stack.append([val, currentMin])
 ```
 
 Unlike an ordinary stack, we store a list of integers instead of an integer. If there is no element in the stack, the element we are adding is the minimum. But if there is, we find the minimum between the current smallest and the input value. Since we push the element on top of the stack in order, it is guaranteed that when popping the pair out, the second entry of each stack element is always the minimum found until that point. Eventually, we can accomplish the task in $O(1)$ time.
