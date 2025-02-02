@@ -1,5 +1,5 @@
 ---
-tag: NUS-Courses
+tags: NUS-Courses
 ---
 
 # Useful Stuffs from MA1522
