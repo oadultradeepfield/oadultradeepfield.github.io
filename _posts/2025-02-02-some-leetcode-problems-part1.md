@@ -97,7 +97,31 @@ Notice how `dfs` is a helper function. We need to call this function in the main
 
 ## 46. Permutations
 
-To be updated.
+Permutations and combinations are the classic problems that I even learned in CS1101S. I think the recursion idea is not complicated. The tricky part is writing the code to implement while handling language-specific paradigms. But the general idea is that if you have to permute `[1,2,3]`, you can separate the problem into trying to insert `1` to all possible permutations of `[2,3]`, which is
+
+```
+[1, 2, 3], [2, 1, 3], [2, 3, 1]
+```
+
+If you realize that the `[2,3]` can be permuted to `[3,2]`, we now get another list to insert, resulting in
+
+```
+[1, 3, 2], [3, 1, 2], [3, 2, 1]
+```
+
+If we combine the two lists, we have found all possible permutations of the 1, 2, and 3. The base case is the empty permutation, which we will return `[[]]`. In Python, we can write what we have previously discussed like this:
+
+```python
+top = nums[-1]
+wish = self.permute(nums[:-1])
+res = []
+
+for p in wish:
+    for i in range(len(p) + 1):
+        res.append(p[:i] + [top] + p[i:]) # Key Idea
+```
+
+I usually make a mistake on my first try, forgetting that the output is an array of an array of integers, not just one layer nesting. You need to add each element correspondingly, resulting in the correct permutation. This problem further depicts the beauty of recursion. You don't need to think about the underlying process. Treat it like an already correct returned value.
 
 ---
 
