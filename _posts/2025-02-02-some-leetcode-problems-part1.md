@@ -127,7 +127,44 @@ I usually make a mistake on my first try, forgetting that the output is an array
 
 ## 39. Combination Sum
 
-To be updated.
+Although LeetCode tagged the previous task as backtracking, I feel that the current problem is a better introduction to the algorithms. Essentially, backtracking is used in a specific scenario, where we must decide on various possible choices and validate the choice if it leads to a solution. After that, we return to the starting path and explore other solutions.
+
+In this problem, we want to explore all possible combinations of elements in an array that sum up to the `target` value, and we may choose a single value as many times as we wish. Thus, the modified template for a helper function for backtracking looks something like this:
+
+```python
+def backtrack(index, path):
+    if sum(path) == target:
+        res.append(path.copy())
+        return
+
+    if sum(path) > target or index >= len(candidates):
+        return
+
+    for i in range(index, len(candidates)):
+        path.append(candidates[i])
+        backtrack(i, path) # Key Idea
+        path.pop()
+```
+
+The condition for leaving the current path leads to a solution where we append the result or otherwise where we would leave the path. In the loop, you are basically appending a value to the path and backtracking it to see if it leads to a solution. After that, we pop it from the path to explore other solutions. Another wishfully thought example of recursion! The key idea line may be a bit tricky to understand. In some problems, we may want to use `i + 1` as the duplicates are not allowed. But it is allowed for this problem, so we want to explore itself as well.
+
+However, there is a possible optimization to this problem. The current solution runs in $O(n^m)$ time where $n$ is the length of candidates and $m$ is the recursion depth. Additionally, we need to sum an array at each step, which takes another $O(k)$ time where $k$ is the length of the current path. One possible way is to instead keep track of the remaining to the sum, like below:
+
+```python
+def optimizedBacktrack(index, path, remaining):
+    if remaining == 0:
+        res.append(path.copy())
+        return
+
+    for i in range(index, len(candidates)):
+        if candidates[i] > remaining:
+            break
+        path.append(candidates[i])
+        optimizedBacktrack(i, path, remaining - candidates[i])
+        path.pop()
+```
+
+This still has a similar order of growth but potentially with less constant factors. The extra works that need to be done is to sort the array first using `candidates.sort()`, which is a relatively small cost compared to the exponential growth. This approach allows us to just skip the elements that are too large, knowing that they won't make up the target (or remaining) anyway.
 
 ---
 
