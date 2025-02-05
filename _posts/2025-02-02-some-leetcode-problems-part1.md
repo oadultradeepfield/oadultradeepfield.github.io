@@ -170,7 +170,35 @@ This still has a similar order of growth but potentially with less constant fact
 
 ## 73. Set Matrix Zeroes
 
-To be updated.
+I believe this problem will be straightforward for most people. However, the difficulty is the constraint of using only $O(1)$ space complexity. This restriction forces you to use some trick to put some flags inside the matrix that will let you know which rows or columns to set as zeroes when you revisit the matrix again.
+
+The idea is to flag the first entry of the row or column that needs to be replaced with zeroes in the first pass. But wait, how can we ensure that as we fill zeroes in the second iteration, it doesn't interfere with the flag? One solution is to only replace those from index 1 onwards, excluding the first row and column, and we may need to check initially if the first rows and columns have zero or not:
+
+```python
+# Key Idea
+first_row_has_zero = any(matrix[0][c] == 0 for c in range(n))
+first_col_has_zero = any(matrix[r][0] == 0 for r in range(m))
+
+for r in range(1, m):
+    for c in range(1, n):
+        if matrix[r][c] == 0:
+            matrix[r][0] = 0
+            matrix[0][c] = 0
+```
+
+After replacing the corresponding entries with zeroes, we then replace the first rows and columns if applicable:
+
+```python
+if first_row_has_zero:
+    for c in range(n):
+        matrix[0][c] = 0
+
+if first_col_has_zero:
+    for r in range(m):
+        matrix[r][0] = 0
+```
+
+This approach allows us to complete the problem with a time complexity of $O(mn)$ without using any extra spaces. The naive solution of using a hash set to store the rows and columns to be replaced may take at least $O(mn)$ space.
 
 ---
 
