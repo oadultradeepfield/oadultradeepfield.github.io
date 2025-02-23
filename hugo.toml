@@ -1,0 +1,79 @@
+baseURL = 'https://blog.phanuphats.com/'
+languageCode = 'en-us'
+title = 'Phanuphat Srisukhawasu'
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Meta description
+description = "My blog where I share my mini pet projects and cool findings I've encountered along my learning and building journeys."
+showFooter = false
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'base16-eighties'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = '@oadultradeepfield'
+homeIntroContent = """
+Hi! I'm Oad! Right now, I'm focused on two things I enjoy: improving everyday processes to make them faster and more fun, and creating interactive tools that make learning engaging and exciting.
+
+On this website, I share my mini pet projects and cool findings I've encountered along my learning and building journeys.
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 10
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = true
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/phanuphats/"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/oadultradeepfield"
+
+[[params.social]]
+name = "rss"
+url = "https://www.phanuphats.com/"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "slides"
+url = "/slides"
+
+[[params.menu]]
+name = "tags"
+url = "/tags"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'catppuccin-mocha'
+
+# Giscus comments
+[params.giscus]
+enable = false
+
+[module]
+[[module.imports]]
+path = "github.com/tomfran/typo"

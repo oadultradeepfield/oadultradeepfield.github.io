@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Midterm Cheat Sheet</title>
+    <meta charset="utf-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/larger.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dark.css" />
+  </head>
+  <body>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+        sourceUrl: "markdown/2425s2-midterm.md",
+        navigation: {
+          scroll: false,
+        },
+        ratio: "16:9",
+        highlightStyle: "idea",
+        highlightLines: true,
+        slideNumberFormat:
+          "@oadultradeepfield &nbsp; | &nbsp; %current% / %total%",
+      });
+    </script>
+  </body>
+</html>

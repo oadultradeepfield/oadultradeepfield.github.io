@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Series Analysis</title>
+    <meta charset="utf-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dark.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [["$", "$"]],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          skipTags: ["script", "noscript", "style", "pre"],
+        },
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+        sourceUrl: "markdown/2425s1-time-series-analysis.md",
+        navigation: {
+          scroll: false,
+        },
+        ratio: "16:9",
+        highlightStyle: "ir-black",
+        highlightLines: true,
+        slideNumberFormat:
+          "@oadultradeepfield &nbsp; | &nbsp; %current% / %total%",
+      });
+    </script>
+  </body>
+</html>
