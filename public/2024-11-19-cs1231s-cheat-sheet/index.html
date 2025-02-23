@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+    <script
+      src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload"
+      data-no-instant
+      defer
+    ></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="icon"
+      type="image/ico"
+      href="http://localhost:1313//favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="http://localhost:1313//favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="http://localhost:1313//favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="http://localhost:1313//android-chrome-192x192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="http://localhost:1313//apple-touch-icon.png"
+    />
+
+    <meta name="description" content="" />
+
+    <title>CS1231S Discrete Structures | Phanuphat Srisukhawasu</title>
+
+    <link
+      rel="canonical"
+      href="http://localhost:1313/2024-11-19-cs1231s-cheat-sheet/"
+    />
+
+    <meta
+      property="og:url"
+      content="http://localhost:1313/2024-11-19-cs1231s-cheat-sheet/"
+    />
+    <meta property="og:site_name" content="Phanuphat Srisukhawasu" />
+    <meta property="og:title" content="CS1231S Discrete Structures" />
+    <meta
+      property="og:description"
+      content="These are things I found pretty helpful as an average student. They might not cover everything, but I refer to them whenever I need some intuition."
+    />
+    <meta property="og:locale" content="en_us" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="article:published_time"
+      content="2024-11-19T00:00:00+00:00"
+    />
+    <meta
+      property="article:modified_time"
+      content="2024-11-19T00:00:00+00:00"
+    />
+    <meta property="article:tag" content="Cheatsheet" />
+
+    <link
+      rel="stylesheet"
+      href="/assets/combined.min.118006e8f5c589e5b687b575b3669e6f8a52b74fa6e3e920dce1c8ef773d6a12.css"
+      media="all"
+    />
+  </head>
+
+  <body class="auto">
+    <div class="content">
+      <header>
+        <div class="header">
+          <h1 class="header-title">
+            <a href="http://localhost:1313/">Phanuphat Srisukhawasu</a>
+          </h1>
+
+          <div class="flex">
+            <p class="small">
+              <a href="/"> /home </a>
+            </p>
+
+            <p class="small">
+              <a href="/posts"> /posts </a>
+            </p>
+
+            <p class="small">
+              <a href="/about"> /about </a>
+            </p>
+
+            <p class="small">
+              <a href="/slides"> /slides </a>
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="breadcrumbs">
+          <a href="/">Home</a>
+          <span class="breadcrumbs-separator"> / </span>
+
+          <a href="/2024-11-19-cs1231s-cheat-sheet/"
+            >CS1231S Discrete Structures</a
+          >
+        </div>
+
+        <div>
+          <div class="single-intro-container">
+            <h1 class="single-title">CS1231S Discrete Structures</h1>
+
+            <p class="single-summary">
+              These are things I found pretty helpful as an average student.
+              They might not cover everything, but I refer to them whenever I
+              need some intuition.
+            </p>
+
+            <p class="single-readtime">
+              <time datetime="2024-11-19T00:00:00&#43;00:00"
+                >November 19, 2024</time
+              >
+
+              &nbsp; · &nbsp; 9 min read
+            </p>
+          </div>
+
+          <div class="single-tags">
+            <span>
+              <a href="http://localhost:1313/tags/cheatsheet/">#Cheatsheet</a>
+            </span>
+          </div>
+
+          <aside class="toc">
+            <p><strong>Table of contents</strong></p>
+            <nav id="TableOfContents">
+              <ul>
+                <li><a href="#real-numbers">Real Numbers</a></li>
+                <li>
+                  <a href="#tutorial-1---2-logic-and-proofs"
+                    >Tutorial 1 - 2 (Logic and Proofs)</a
+                  >
+                </li>
+                <li><a href="#tutorial-3-sets">Tutorial 3 (Sets)</a></li>
+                <li>
+                  <a href="#tutorial-4---5-relations"
+                    >Tutorial 4 - 5 (Relations)</a
+                  >
+                </li>
+                <li>
+                  <a href="#tutorial-6-functions">Tutorial 6 (Functions)</a>
+                </li>
+                <li>
+                  <a href="#tutorial-7-mathematical-induction"
+                    >Tutorial 7 (Mathematical Induction)</a
+                  >
+                </li>
+                <li>
+                  <a href="#tutorial-8-cardinality">Tutorial 8 (Cardinality)</a>
+                </li>
+                <li>
+                  <a href="#tutorial-9---10-counting-and-probability"
+                    >Tutorial 9 - 10 (Counting and Probability)</a
+                  >
+                </li>
+                <li>
+                  <a href="#tutorial-10---11-graphs-and-trees"
+                    >Tutorial 10 - 11 (Graphs and Trees)</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </aside>
+
+          <div class="single-content">
+            <p><strong>Note</strong>: Taken in AY2024/25 Semester 1</p>
+            <h2 class="heading" id="real-numbers">
+              Real Numbers
+              <a class="anchor" href="#real-numbers">#</a>
+            </h2>
+            <ul>
+              <li>
+                <strong>T11 - Zero Product Property</strong>: $ab = 0 \implies a
+                = 0 \lor b = 0$
+              </li>
+              <li><strong>T21:</strong> $a \neq 0 \implies a^2&gt;0$.</li>
+              <li>
+                <strong>T25</strong>: If the product of two numbers is positive,
+                then both numbers are either positive or both are negative
+              </li>
+              <li>
+                <strong>T27</strong>: $\forall a, b, c \in \mathbb{R}$ $((0 &lt;
+                a &lt; c \land 0 &lt; b &lt; d) \implies 0 &lt; ab &lt; cd)$.
+              </li>
+              <li>
+                <strong>Ord1</strong>: If $a$ and $b$ are positive, so are $a+b$
+                and $ab$.
+              </li>
+            </ul>
+            <hr />
+            <h2 class="heading" id="tutorial-1---2-logic-and-proofs">
+              Tutorial 1 - 2 (Logic and Proofs)
+              <a class="anchor" href="#tutorial-1---2-logic-and-proofs">#</a>
+            </h2>
+            <ul>
+              <li>
+                The statement &ldquo;$q$ if $p$&rdquo; or &ldquo;$p$ only if
+                $q$&rdquo; means $p\implies q$. Here, $p$ is a sufficient
+                condition for $q$, and $q$ is a necessary condition for $p$.
+              </li>
+              <li>
+                To prove statements aren&rsquo;t equivalent, we can plug in
+                truth values and show that some rows in their truth tables don’t
+                match.
+              </li>
+              <li>
+                The contrapositive of $p\implies q$ is $\neg q \implies \neg p$,
+                which are equivalent. The inverse, $\neg p \implies \neg q$, is
+                equivalent to the converse, $q \implies p$.
+              </li>
+              <li>
+                <strong>Valid Argument</strong>: If all premises are true
+                (critical rows), the conclusion must also be true. An argument
+                is invalid if the conclusion can be false, even when the
+                premises are true.
+              </li>
+              <li>
+                <strong>Transitive Rule of Inference</strong>: $((p\implies q)
+                \land (q\implies r))\implies (p\implies r)$.
+              </li>
+              <li>
+                <strong>Implication Law</strong>: $p \implies q \equiv \neg p
+                \lor q$.
+              </li>
+              <li>
+                <strong>Negation of a Conditional Statement</strong>: $\neg
+                (p\implies q)\equiv p\land \neg q$
+              </li>
+              <li>
+                <strong>De Morgan&rsquo;s Laws</strong>: $\neg(p \land q) \equiv
+                \neg p \lor \neg q$ and $\neg(p \lor q) \equiv \neg p \land \neg
+                q$.
+              </li>
+              <li>
+                <strong>Absorption Law</strong>: $p \lor (p \land q) \equiv p$
+                and $p \land (p \lor q) \equiv p$.
+              </li>
+              <li>
+                <strong>Double Negative Law</strong>: $\neg(\neg p) \equiv p$.
+              </li>
+              <li>
+                <strong>Commutative Law</strong>: $p \lor q \equiv q \lor p$ and
+                $p \land q \equiv q \land p$.
+              </li>
+              <li>
+                <strong>Distributive Law</strong>: $p \land (q \lor r) \equiv (p
+                \land q) \lor (p \land r)$ and $p \lor (q \land r) \equiv (p
+                \lor q) \land (p \lor r)$.
+              </li>
+              <li>
+                <strong>Negation Law</strong>: $p \lor \neg p \equiv
+                \text{True}$ and $p \land \neg p \equiv \text{False}$.
+              </li>
+              <li>
+                <strong>Identity Law</strong>: $p \lor \text{False} \equiv p$
+                and $p \land \text{True} \equiv p$.
+              </li>
+              <li>
+                It’s good practice to write statements inside brackets
+                <strong>after a quantifier</strong>, like $\forall x\in A(P(x))$
+                or $\forall x \in A$ such that $P(x)$, to clearly show that $x$
+                is bounded. Otherwise, $x$ could be a
+                <strong>free variable</strong>.
+              </li>
+            </ul>
+            <hr />
+            <h2 class="heading" id="tutorial-3-sets">
+              Tutorial 3 (Sets)
+              <a class="anchor" href="#tutorial-3-sets">#</a>
+            </h2>
+            <ul>
+              <li>
+                <strong>Proving subset $A\subseteq B$</strong>: Select an
+                arbitrary element $x \in A$ and show that $x \in B$
+              </li>
+              <li>
+                <strong>Proving set equality</strong>: $A = B \iff (A \subseteq
+                B \land B \subseteq A)$, alternatively use set identities below.
+              </li>
+              <li>
+                <strong>Theorem 6.2.1</strong>: $A \subseteq B \land B \subseteq
+                C \implies A \subseteq C$.
+              </li>
+              <li>
+                <strong>De Morgan&rsquo;s Law</strong>: $\overline{A \cap B} =
+                \overline{A} \cup \overline{B}$ and $\overline{A \cup B} =
+                \overline{A} \cap \overline{B}$.
+              </li>
+              <li>
+                <strong>Set Difference Law</strong>: $A \setminus B = A \cap
+                \overline{B}$
+              </li>
+              <li>
+                <strong>Double Complement Law</strong>: $\overline{\overline{A}}
+                = A$
+              </li>
+              <li>
+                <strong>Commutative Law</strong>: $A \cup B = B \cup A$ and $A
+                \cap B = B \cap A$
+              </li>
+              <li>
+                <strong>Distributive Law</strong>: $A \cup (B \cap C) = (A \cup
+                B) \cap (A \cup C)$
+              </li>
+              <li>
+                <strong>Complement Law</strong>: $A \cup \overline{A} = U$
+                (where $U$ is the universal set)
+              </li>
+              <li>
+                <strong>Identity Law</strong>: $A \cap U = A$ (where $U$ is the
+                universal set)
+              </li>
+            </ul>
+            <hr />
+            <h2 class="heading" id="tutorial-4---5-relations">
+              Tutorial 4 - 5 (Relations)
+              <a class="anchor" href="#tutorial-4---5-relations">#</a>
+            </h2>
+            <ul>
+              <li>
+                A <strong>symmetric relation</strong> also implies $R=R^{-1}$.
+              </li>
+              <li>
+                A <strong>composite relation</strong> $S\circ R$ means we apply
+                $R$ first and then $S$. Additionally, the composition of more
+                than two relations is associative, i.e., $(T\circ S)\circ
+                R=T\circ(S\circ R)$.
+              </li>
+              <li>
+                The <strong>equivalence class</strong> of
+                <strong>an element $a$</strong> under an equivalence relation
+                $\sim$, denoted as $[a]$, is the set of all elements that are
+                equivalent to $a$.
+              </li>
+              <li>
+                For a partial order $\preceq$ on a set $A$, two elements $a,b\in
+                A$ <strong>are compatible</strong> $\iff$ there exists an
+                element $c$ such that $a\preceq c \land b\preceq c$.
+              </li>
+              <li>
+                <strong>Equivalence Relations and Composition</strong>: (a)
+                $R^{-1} \circ R = R \circ R^{-1}$, (b) $R = R \circ R$, and (c)
+                $R \circ R^{-1} = R$.
+              </li>
+              <li>
+                <strong>Lemma Rel.1 - Equivalence Classes</strong>: For all $x,
+                y \in A$ with equivalence relation $\sim$, the following are
+                equivalent: (i) $x \sim y$, (ii) $[x] = [y]$, (iii) $[x] \cap
+                [y] \neq \emptyset$
+              </li>
+              <li>
+                A <strong>linear extension</strong> of a partial order is a
+                total order where all elements are comparable. To count the
+                number of possible linearizations, we can use
+                <strong>recursion</strong> to add
+                <strong>minimal elements</strong>, accordingly.
+              </li>
+              <li>
+                A <strong>chain</strong> in a partial order is a subset where
+                every pair of elements is comparable, forming a total order. Its
+                length is <strong>one less than</strong> the number of elements.
+                A <strong>maximal chain</strong> is a chain $M$ that cannot be
+                extended by adding more elements.
+              </li>
+            </ul>
+            <hr />
+            <h2 class="heading" id="tutorial-6-functions">
+              Tutorial 6 (Functions)
+              <a class="anchor" href="#tutorial-6-functions">#</a>
+            </h2>
+            <ul>
+              <li>
+                A function takes an <strong>input from the domain</strong> and
+                gives <strong>a single output in the codomain</strong>. No input
+                can have more than one output and each input needs to have an
+                output.
+              </li>
+              <li>
+                <strong>(Theorem 7.2.3)</strong> The
+                <strong>composition</strong> of two or more injective functions
+                is also <strong>injective</strong>, and
+                <strong>(Theorem 7.2.4)</strong> the
+                <strong>composition</strong> of two or more surjective functions
+                is also <strong>surjective</strong>.
+              </li>
+              <li>
+                A function is
+                <strong
+                  >injective ($\forall x_1,x_2 (f(x_1)=f(x_2)\implies
+                  x_1=x_2$))</strong
+                >
+                $\iff$ it has a <strong>left inverse</strong>, and is
+                <strong>surjective ($\forall y,\exists x,f(x)=y$)</strong>
+                $\iff$ it has a <strong>right inverse</strong>.
+              </li>
+            </ul>
+            <hr />
+            <h2 class="heading" id="tutorial-7-mathematical-induction">
+              Tutorial 7 (Mathematical Induction)
+              <a class="anchor" href="#tutorial-7-mathematical-induction">#</a>
+            </h2>
+            <ul>
+              <li>
+                <strong>Mathematical Induction (MI)</strong>: Define $P(n)$,
+                prove base case, assume $P(k)$ true, prove $P(k) \implies
+                P(k+1)$, conclude $P(n)$ true for all $n \geq$ base case.
+              </li>
+              <li>
+                <strong>Strong Mathematical Induction (Strong MI)</strong>:
+                Define $P(n)$, prove base case, assume $P(i), P(i+1), \dots,
+                P(k)$ true, prove $P(i) \land P(i+1) \land \dots \land P(k)
+                \implies P(k+1)$, conclude $P(n)$ true for all $n \geq$ base
+                case.
+              </li>
+            </ul>
+            <hr />
+            <h2 class="heading" id="tutorial-8-cardinality">
+              Tutorial 8 (Cardinality)
+              <a class="anchor" href="#tutorial-8-cardinality">#</a>
+            </h2>
+            <ul>
+              <li>
+                <strong>Proposition 9.1</strong>: An infinite set $B$ is
+                countable $\iff$ there is a sequence $b_0, b_1, b_2, \ldots$ in
+                which every element of $B$ appears
+                <strong>exactly once</strong>.
+              </li>
+              <li>
+                <strong>Lemma 9.2</strong>: An infinite set $B$ is countable
+                $\iff$ there is a sequence $b_0, b_1, b_2, \ldots$ in which
+                every element of $B$ appears.
+              </li>
+              <li>
+                <strong>Proposition 9.3</strong>: Every infinite set has a
+                countably infinite subset.
+              </li>
+              <li>
+                <strong>Lemma 9.4</strong>: Let $A$ and $B$ be countably
+                infinite sets. Then $A \cup B$ is countable. This also
+                generalizes to the countability of
+                $\bigcup\limits_{i=1}^{\infty} A_{i}$.
+              </li>
+              <li>
+                <strong>Pigeonhole Principle (PHP)</strong>: Let $A$ and $B$ be
+                finite sets. If there is an injection $f: A\to B$, then the
+                cardinality of $A$ is $\leq$ that of $B$.
+              </li>
+              <li>
+                <strong>$\mathbb{Z}^+ \times \mathbb{Z}^+$ is countable</strong
+                >: Used in the proof that the union of countably infinite sets
+                indexed by $\mathbb{Z}^+$ is countable.
+              </li>
+            </ul>
+            <hr />
+            <h2 class="heading" id="tutorial-9---10-counting-and-probability">
+              Tutorial 9 - 10 (Counting and Probability)
+              <a class="anchor" href="#tutorial-9---10-counting-and-probability"
+                >#</a
+              >
+            </h2>
+            <ul>
+              <li>
+                <strong>Inclusion-Exclusion Principle</strong>: $P(A\cup B\cup
+                C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cap B\cap
+                C)$.
+              </li>
+              <li>
+                <strong>Number of Circular Permutations</strong>: $(n-1)!$ (fix
+                one object and permute the rest).
+              </li>
+              <li>
+                <strong>Generalized PHP</strong>: If $n$ objects are placed into
+                $k$ boxes, then there is
+                <strong>at least one box</strong> containing
+                <strong>at least</strong> $\lceil n/k \rceil$
+                <strong>objects</strong>.
+              </li>
+              <li>
+                <strong>Stars and Bars</strong>: For placing $n$
+                indistinguishable objects into $k$ boxes, the number of ways
+                depends on the
+                <strong>constraint of minimum objects per box</strong>:
+                $\displaystyle\binom{n+k-1}{k-1}$ when boxes can be empty,
+                $\displaystyle\binom{n-1}{k-1}$ with
+                <strong>at least one</strong> object per box ($n+k-1-k=n-1$).
+              </li>
+              <li>
+                <strong>Binomial Theorem</strong>:
+                $\displaystyle(x+y)^n=\sum_{k=0}^n\binom{n}{k}x^{n-k}y^k$.
+              </li>
+              <li>
+                <strong>Linearity of Expected Value</strong>:
+                $E(X_1+X_2+\cdots+X_n)=E(X_1)+E(X_2)+\cdots+E(X_n)$.
+              </li>
+            </ul>
+            <hr />
+            <h2 class="heading" id="tutorial-10---11-graphs-and-trees">
+              Tutorial 10 - 11 (Graphs and Trees)
+              <a class="anchor" href="#tutorial-10---11-graphs-and-trees">#</a>
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>Theorem 10.1.1</strong>: The total degree of a graph
+                  is $2$ times the number of edges (which is even).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Proposition 10.1.3</strong>: In any graph, there are
+                  an even number of edges with odd degree.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Lemma 10.2.1</strong>: Let $G$ be a graph. (a) If $G$
+                  is connected, then any two distinct vertices of $G$ can be
+                  connected by a path. (b) If vertices $v$ and $w$ are part of a
+                  circuit in $G$ and one edge is removed from the circuit, then
+                  there still exists a trail from $v$ to $w$ in $G$. (c) If $G$
+                  is connected and $G$ contains a circuit, then an edge of the
+                  circuit can be removed without disconnecting $G$.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Theorem 10.2.4</strong>: A graph $G$ has an Euler
+                  circuit $\iff$ $G$ is connected and every vertex of $G$ has
+                  positive even degree.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Corollary 10.2.5</strong>: Let $G$ be a graph, and let
+                  $v$ and $w$ be two distinct vertices of $G$. There is an Euler
+                  trail from $v$ to $w$ $\iff G$ is connected, $v$ and $w$ have
+                  odd degree, and all other vertices of G have positive even
+                  degree.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Proposition 10.2.6</strong>: If a graph $G$ has a
+                  Hamiltonian circuit, then $G$ has a subgraph $H$ with the
+                  following properties:
+                </p>
+                <ol>
+                  <li>$H$ contains every vertex of $G$.</li>
+                  <li>$H$ is connected.</li>
+                  <li>$H$ has the same number of edges as vertices.</li>
+                  <li>Every vertex of $H$ has degree 2.</li>
+                </ol>
+              </li>
+              <li>
+                <p>
+                  If $A$ is the adjacency matrix of a graph $G$, then
+                  $A_{ij}=A_{ji}$ if $G$ is undirected (symmetric).
+                  Additionally, $A^n_{ij}$ gives the numbers of walks of length
+                  $n$ (have $n$ edges in the walks) from vertex $i$ to vertex
+                  $j$.
+                </p>
+              </li>
+              <li>
+                <p>
+                  For a graph $G$ with $n$ vertices, if $G$ is $K_n$
+                  <strong>(complete graph)</strong>, then it has $n(n-1)/2$
+                  edges, and if $G$ is $K_{m,n}$
+                  <strong>(complete bipartite graph)</strong>, then it has $mn$
+                  edges.
+                </p>
+              </li>
+              <li>
+                <p>
+                  A <strong>self-complementary</strong> graph is
+                  <strong>isomorphic</strong> with its complement.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Theorem 10.4.1</strong>: Let $S$ be a set of graphs
+                  and let $\cong$ be the relation of graph isomorphism on $S$.
+                  Then $\cong$ is an equivalence relation on $S$.
+                </p>
+              </li>
+              <li>
+                <p>
+                  A <strong>dominating Set ($D$)</strong> in a graph $G$ is a
+                  subset of vertices such that every vertex not in $D$ is
+                  adjacent to some vertex in $D$. The
+                  <strong>minimal dominating set</strong> is a set such that
+                  <strong>none of its proper subsets</strong> are dominating.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Euler&rsquo;s Formula</strong>: For a planar graph $G$
+                  with $e$ edges, $v$ vertices, and $f$ faces: $f=e-v+2$.
+                </p>
+                <ul>
+                  <li>
+                    If $G$ is a simple planar graph with $v\geq 3$, then $e\leq
+                    3v-6$.
+                  </li>
+                  <li>
+                    If $G$ is a bipartite planar graph with $v\geq 3$, then
+                    $e\leq 2v-4$.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>
+                  <strong>Number of Spanning Trees</strong>: For a tree,
+                  there&rsquo;s 1 spanning tree; for a cyclic graph with $n$
+                  vertices, $n$ spanning trees (there are $n$ ways to remove one
+                  edge); for a complete graph with $n$ vertices, $n^{n-2}$
+                  spanning trees (Cayley&rsquo;s formula).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Kruskal&rsquo;s Algorithm</strong>: Add minimum-weight
+                  edges without creating cycles until all vertices are included.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Prim&rsquo;s Algorithm</strong>: Start with an
+                  arbitrary node, progressively add minimum-weight edges
+                  connecting to unvisited vertices.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Theorem 10.5.2</strong>: Any tree with $n$ vertices
+                  ($n &gt; 0$) has $n − 1$ edges.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Lemma 10.5.5</strong>: Let $G$ be a simple, undirected
+                  graph. If there are two distinct paths from a vertex $v$ to a
+                  different vertex $w$, then $G$ contains a cycle (and hence $G$
+                  is cyclic).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Proposition 10.7.1</strong>: (i) Every connected graph
+                  has a spanning tree. (ii) Any two spanning trees for a graph
+                  have the same number of edges.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We can systematically
+                  <strong>draw non-isomorphic trees</strong> by
+                  <strong>progressively increasing node degrees</strong> or by
+                  <strong>modifying trees with one less vertex</strong> by
+                  adding connections at different positions.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Binary Tree Traversal</strong>:
+                  <strong>Preorder</strong> (Node, Left, Right),
+                  <strong>Inorder</strong> (Left, Node, Right),
+                  <strong>Postorder</strong> (Left, Right, Node); unique trees
+                  determined by combining Preorder with Inorder or Inorder with
+                  Postorder.
+                </p>
+              </li>
+              <li>
+                <p>
+                  With only inorder traversal, $2^n - n$ distinct binary trees
+                  can be drawn with $n$ vertices.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="single-pagination">
+            <hr />
+
+            <div class="flex">
+              <div class="single-pagination-prev">
+                <div class="single-pagination-container-prev">
+                  <div class="single-pagination-text">←</div>
+                  <div class="single-pagination-text">
+                    <a href="/2024-11-19-ma1521-cheat-sheet/">
+                      MA1521 Calculus for Computing
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="single-pagination-next"></div>
+            </div>
+
+            <hr />
+          </div>
+
+          <div class="back-to-top">
+            <a href="#top"> back to top </a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer></footer>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"
+    ></script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+      onload="renderMathInElement(document.body);"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+        });
+      });
+    </script>
+  </body>
+
+  <script src="/js/theme-switch.js"></script>
+  <script defer src="/js/copy-code.js"></script>
+</html>

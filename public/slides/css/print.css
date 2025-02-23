@@ -1,0 +1,23 @@
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+
+  .remark-slide-scaler {
+    position: absolute;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    transform: scale(1) !important;
+  }
+
+  .remark-slide-content {
+    padding: 0.5em;
+  }
+
+  html {
+    -webkit-filter: invert !important;
+  }
+}

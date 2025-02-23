@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    Stream Processing | Phanuphat Srisukhawasu
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/posts/2024-11-24-stream-processing/"/>
+
+<meta property="og:url" content="http://localhost:1313/posts/2024-11-24-stream-processing/">
+  <meta property="og:site_name" content="Phanuphat Srisukhawasu">
+  <meta property="og:title" content="Stream Processing">
+  <meta property="og:description" content="Implementation of Source §4 Streams from Scratch in JavaScript">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-24T00:00:00+00:00">
+    <meta property="article:tag" content="NUS Courses">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.118006e8f5c589e5b687b575b3669e6f8a52b74fa6e3e920dce1c8ef773d6a12.css" media="all">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Phanuphat Srisukhawasu</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/slides" >
+                /slides
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/tags" >
+                /tags
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> / </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> / </span>
+    
+    <a href="/posts/2024-11-24-stream-processing/">Stream Processing</a>
+</div>
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Stream Processing</h1>
+    
+    <p class="single-summary">Implementation of Source §4 Streams from Scratch in JavaScript</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-11-24T00:00:00&#43;00:00">November 24, 2024</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      6 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+  
+
+  <div class="single-tags">
+    
+    <span>
+      <a href="http://localhost:1313/tags/nus-courses/">#NUS Courses</a>
+    </span>
+    
+    
+  </div>
+
+  
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#building-pairs-functionally">Building Pairs Functionally</a></li>
+    <li><a href="#recreating-predeclared-stream-functions">Recreating Predeclared Stream Functions</a>
+      <ul>
+        <li><a href="#essential-stream-operations">Essential Stream Operations</a></li>
+        <li><a href="#stream-generation-functions">Stream Generation Functions</a></li>
+        <li><a href="#stream-processing-functions">Stream Processing Functions</a></li>
+        <li><a href="#stream-combination-and-search-functions">Stream Combination and Search Functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#extra-stream-memoization">Extra: Stream Memoization</a>
+      <ul>
+        <li><a href="#useful-cases">Useful Cases</a></li>
+        <li><a href="#not-always-useful">Not Always Useful</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <p>While reviewing for CS1101S AY2024/25 Semester 1 Final Assessment, I found the concepts of streams and lazy evaluation astonishing, yet challenging. Therefore, I attempted to implement pairs and streams from scratch in pure JavaScript to sharpen my skills.</p>
+<p><strong>Note</strong>: <a href="https://nusmods.com/courses/CS1101S/programming-methodology">CS1101S Programming Methodology</a> is one of the most foundational computer science courses at National University of Singapore (NUS). The course follows the textbook <em>Structure and Interpretation of Computer Programs, JavaScript Adaptation (SICP JS)</em>. Streams are adapted from <a href="https://sourceacademy.org/sicpjs/3.5">Section 3.5, Stream Processing</a>.</p>
+<hr>
+<h2 class="heading" id="building-pairs-functionally">
+  Building Pairs Functionally
+  <a class="anchor" href="#building-pairs-functionally">#</a>
+</h2>
+<p>The following lines of code are my approach to creating <code>pair</code>, which consists of two data elements in the corresponding order. Applying <code>head</code> function to a pair returns the first element, and using <code>tail</code> returns the second element. I am unsure if Source implements it this way, but this version will serve the following tasks.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> pair(x, y) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> (selector) =&gt; (selector ? x : y);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> head(p) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> p(<span style="font-weight:bold;text-decoration:underline">true</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> tail(p) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> p(<span style="font-weight:bold;text-decoration:underline">false</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>pair</code> is a building block of streams. A stream of a certain datatype is defined as a pair, where the head is an element of that type and the tail is a nullary function that, when called, returns the stream of that type. In this blog, I focus on streams of numbers, specifically integers.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#888;font-style:italic">// Example: Finite stream of two elements
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span><span style="font-weight:bold;text-decoration:underline">const</span> one_two_three = pair(1,
+</span></span><span style="display:flex;"><span>                           () =&gt; pair(2,
+</span></span><span style="display:flex;"><span>                                      () =&gt; <span style="font-weight:bold;text-decoration:underline">null</span>)));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// Example: Infinite stream of 1 (i.e. 1, 1, 1, ...)
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span><span style="font-weight:bold;text-decoration:underline">const</span> ones = pair(1, () =&gt; ones);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// Example: Infinite stream of Tetranacci Numbers (i.e. 0, 0, 0, 1, 1, 2, 4, 8, 15, 29, 56, 108, 208, ...)
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> tetranacci_gen(a, b, c, d) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> pair(a,
+</span></span><span style="display:flex;"><span>              () =&gt; tetranacci_gen(b,
+</span></span><span style="display:flex;"><span>                                   c,
+</span></span><span style="display:flex;"><span>                                   d,
+</span></span><span style="display:flex;"><span>                                   a + b + c + d));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> tetranacci = tetranacci_gen(0, 0, 0, 1);
+</span></span></code></pre></div><hr>
+<h2 class="heading" id="recreating-predeclared-stream-functions">
+  Recreating Predeclared Stream Functions
+  <a class="anchor" href="#recreating-predeclared-stream-functions">#</a>
+</h2>
+<h3 class="heading" id="essential-stream-operations">
+  Essential Stream Operations
+  <a class="anchor" href="#essential-stream-operations">#</a>
+</h3>
+<p>The fundamental functions <code>is_null</code> and <code>stream_tail</code> are necessary to work with streams. <code>is_null</code> checks whether a stream has ended, while <code>stream_tail</code> retrieves the next element of a stream by evaluating the nullary function in the tail.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> is_null(s) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> s === <span style="font-weight:bold;text-decoration:underline">null</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> stream_tail(s) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> tail(s)();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 class="heading" id="stream-generation-functions">
+  Stream Generation Functions
+  <a class="anchor" href="#stream-generation-functions">#</a>
+</h3>
+<p>To create streams, we need functions that can generate both finite and infinite sequences. The following functions demonstrate different ways to create streams: from a function and length, from a range of numbers, and from an infinite sequence of integers.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> build_stream(f, n) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> build_stream_helper(i) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold;text-decoration:underline">return</span> i === n ? <span style="font-weight:bold;text-decoration:underline">null</span> : pair(f(i), () =&gt; build_stream_helper(i + 1));
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> build_stream_helper(0);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> enum_stream(start, end) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> enum_stream_helper(i) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold;text-decoration:underline">return</span> i &gt; end ? <span style="font-weight:bold;text-decoration:underline">null</span> : pair(i, () =&gt; enum_stream_helper(i + 1));
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> enum_stream_helper(start);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> integers_from(start) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> pair(start, () =&gt; integers_from(start + 1));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 class="heading" id="stream-processing-functions">
+  Stream Processing Functions
+  <a class="anchor" href="#stream-processing-functions">#</a>
+</h3>
+<p>Stream processing involves transforming, filtering, and analyzing streams. These functions allow us to work with streams while maintaining their lazy evaluation properties.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> eval_stream(s, n) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> eval_stream_helper(stream, i) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold;text-decoration:underline">return</span> i === n
+</span></span><span style="display:flex;"><span>      ? <span style="font-weight:bold;text-decoration:underline">null</span>
+</span></span><span style="display:flex;"><span>      : pair(head(stream), eval_stream_helper(stream_tail(stream), i + 1));
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> eval_stream_helper(s, 0);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> stream_map(f, s) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> is_null(s)
+</span></span><span style="display:flex;"><span>    ? <span style="font-weight:bold;text-decoration:underline">null</span>
+</span></span><span style="display:flex;"><span>    : pair(f(head(s)), () =&gt; stream_map(f, stream_tail(s)));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> stream_filter(pred, s) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> is_null(s)
+</span></span><span style="display:flex;"><span>    ? <span style="font-weight:bold;text-decoration:underline">null</span>
+</span></span><span style="display:flex;"><span>    : pred(head(s))
+</span></span><span style="display:flex;"><span>    ? pair(head(s), () =&gt; stream_filter(pred, stream_tail(s)))
+</span></span><span style="display:flex;"><span>    : stream_filter(pred, stream_tail(s));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> stream_length(s) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> is_null(s) ? 0 : 1 + stream_length(stream_tail(s));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 class="heading" id="stream-combination-and-search-functions">
+  Stream Combination and Search Functions
+  <a class="anchor" href="#stream-combination-and-search-functions">#</a>
+</h3>
+<p>These functions handle operations like combining streams, finding elements, and removing values from streams.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> stream_append(s1, s2) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> is_null(s1)
+</span></span><span style="display:flex;"><span>    ? s2
+</span></span><span style="display:flex;"><span>    : pair(head(s1), () =&gt; stream_append(stream_tail(s1), s2));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> stream_member(v, s) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> is_null(s)
+</span></span><span style="display:flex;"><span>    ? <span style="font-weight:bold;text-decoration:underline">null</span>
+</span></span><span style="display:flex;"><span>    : head(s) === v
+</span></span><span style="display:flex;"><span>    ? s
+</span></span><span style="display:flex;"><span>    : stream_member(v, stream_tail(s));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> stream_ref(s, n) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> n === 0 ? head(s) : stream_ref(stream_tail(s), n - 1);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// Remove the first occurence of `v` in `s`
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> stream_remove(v, s) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> is_null(s)
+</span></span><span style="display:flex;"><span>    ? <span style="font-weight:bold;text-decoration:underline">null</span>
+</span></span><span style="display:flex;"><span>    : head(s) === v
+</span></span><span style="display:flex;"><span>    ? stream_tail(s)
+</span></span><span style="display:flex;"><span>    : pair(head(s), () =&gt; stream_remove(v, stream_tail(s)));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// Remove all occurences of `v` in `s`
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> stream_remove_all(v, s) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> is_null(s)
+</span></span><span style="display:flex;"><span>    ? <span style="font-weight:bold;text-decoration:underline">null</span>
+</span></span><span style="display:flex;"><span>    : head(s) === v
+</span></span><span style="display:flex;"><span>    ? stream_remove_all(v, stream_tail(s))
+</span></span><span style="display:flex;"><span>    : pair(head(s), () =&gt; stream_remove_all(v, stream_tail(s)));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Note</strong>: I omitted some functions that involved <code>list</code> or were not commonly featured in past assessments.</p>
+<hr>
+<h2 class="heading" id="extra-stream-memoization">
+  Extra: Stream Memoization
+  <a class="anchor" href="#extra-stream-memoization">#</a>
+</h2>
+<h3 class="heading" id="useful-cases">
+  Useful Cases
+  <a class="anchor" href="#useful-cases">#</a>
+</h3>
+<p>In the second half of the semester, this course introduces the concept of memoization using arrays, which is useful for avoiding redundant computations in recurrence relations like Fibonacci Numbers: $T(n) = T(n-1) + T(n-2)$, where $T(0) = 0$ and $T(1) = 1$. Notably, they show us that memoization can sometimes be applied to streams as well! Here is the function they introduced:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> memo_fun(fun) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;font-style:italic;text-decoration:underline">let</span> already_run = <span style="font-weight:bold;text-decoration:underline">false</span>;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;font-style:italic;text-decoration:underline">let</span> result = <span style="font-weight:bold;text-decoration:underline">undefined</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> mfun() {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold;text-decoration:underline">if</span> (already_run) {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold;text-decoration:underline">return</span> result;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    result = fun();
+</span></span><span style="display:flex;"><span>    already_run = <span style="font-weight:bold;text-decoration:underline">true</span>;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold;text-decoration:underline">return</span> result;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> mfun;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>It may feel odd and unconvincing at first why this works, but let&rsquo;s walk through it step by step. There are cases where this function won&rsquo;t work, but there are also cases where it can be highly useful.</p>
+<p>Essentially, this function is designed to store the result of a function that has already been evaluated, so you don’t need to run it again. Consider the example below:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> ms(m, s) {
+</span></span><span style="display:flex;"><span>  display(m);
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> s;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> ones_memo = pair(
+</span></span><span style="display:flex;"><span>  1,
+</span></span><span style="display:flex;"><span>  memo_fun(() =&gt; ms(<span style="color:#666;font-style:italic">&#34;B&#34;</span>, ones_memo))
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>When we call <code>stream_ref(ones_memo, 3)</code>, we will see only one <code>&quot;B&quot;</code> displayed. This happens because the name <code>ones_memo</code> is bound to the pair that was created. When <code>stream_tail</code> is called, the program refers back to the previously created function object, so no new pairs are generated. The memoization works because <code>memo_fun(() =&gt; ms(&quot;B&quot;, ones_memo))</code> is executed only once. Subsequent calls simply reference the result stored in the inner function.</p>
+<p>Interestingly, all pairs in streams are created with names bound to them. They are separate but accessible through calls to <code>stream_tail</code>, which looks up the name in the environment. Once created in the environment of the CSE Machine, they persist, saving a significant amount of computation.</p>
+<h3 class="heading" id="not-always-useful">
+  Not Always Useful
+  <a class="anchor" href="#not-always-useful">#</a>
+</h3>
+<p>The following example is adapted from the AY2021/22 Semester 1 Final Assessment. If we analyze the order of growth in terms of the number of additions performed when running <code>eval_stream(integers_2, 3)</code>, it tells a different story.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> add_streams(s1, s2) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> pair(head(s1) + head(s2), () =&gt;
+</span></span><span style="display:flex;"><span>    add_streams(stream_tail(s1), stream_tail(s2))
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> partial_sums_2(s) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> pair(
+</span></span><span style="display:flex;"><span>    head(s),
+</span></span><span style="display:flex;"><span>    memo(() =&gt; add_streams(stream_tail(s), partial_sums_2(s)))
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> ones = pair(1, () =&gt; ones);
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> integers_2 = partial_sums_2(ones);
+</span></span></code></pre></div><p>In this case, the implementation does not benefit from memoization because the stream <code>ones</code> is never reused. Instead, it is recreated repeatedly throughout the program. As a result, the memoized results cannot be accessed or reused like in the earlier examples thus the order of growth for the number of additionsis still $1+2+3+\cdots+n-1+n=\displaystyle\frac{n(n+1)}{2}$ which is $\Theta (n^2)$.</p>
+<p>Wish me luck for the upcoming finals—here’s hoping all this effort pays off!</p>
+
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/posts/2024-11-19-cs1231s-cheat-sheet/">
+                        CS1231S Discrete Structures
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/posts/2024-11-25-st1131-cheat-sheet/">
+                        ST1131 Introduction to Statistics and Statistical Computing
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  <footer>
+    
+
+
+  </footer>
+
+  
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+  
+
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

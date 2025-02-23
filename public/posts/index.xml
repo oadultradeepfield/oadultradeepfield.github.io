@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Phanuphat Srisukhawasu</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Phanuphat Srisukhawasu</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful Stuffs from MA1522</title>
+      <link>http://localhost:1313/posts/2025-01-24-useful-stuffs-from-ma1522/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-01-24-useful-stuffs-from-ma1522/</guid>
+      <description>Life is a linear equation in which you can&amp;rsquo;t cross multiply! If you think you can do it, you can do it. If you think you can&amp;rsquo;t do it, you can&amp;rsquo;t do it (Quote by Israelmore Ayivor)</description>
+    </item>
+    <item>
+      <title>CS2100 Common Mistakes Part 1</title>
+      <link>http://localhost:1313/posts/2025-01-22-cs2100-common-mistakes-part-1/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-01-22-cs2100-common-mistakes-part-1/</guid>
+      <description>We learn from failure, not from success! (Quote by Bram Stoker)</description>
+    </item>
+    <item>
+      <title>Solving 2-Body Problem with RK4 in JavaScript</title>
+      <link>http://localhost:1313/posts/2024-12-12-two-body-rk4-js/</link>
+      <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-12-12-two-body-rk4-js/</guid>
+      <description>The more perfect the approximation to truth, the more perfect is art (Quote by Maria Montessori)</description>
+    </item>
+    <item>
+      <title>Astronomical POV on Galaxy10 Anomaly Detection</title>
+      <link>http://localhost:1313/posts/2024-12-09-galaxy10-anomaly-detection/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-12-09-galaxy10-anomaly-detection/</guid>
+      <description>Somewhere, something incredible is waiting to be known (Quote by Carl Sagan)</description>
+    </item>
+    <item>
+      <title>Interesting Problems from CS1231S Past Year Papers</title>
+      <link>http://localhost:1313/posts/2024-11-28-cs1231s-interesting-problems/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-11-28-cs1231s-interesting-problems/</guid>
+      <description>Most of us spend too much time on what is urgent and not enough time on what is important (Quote by Stephen R. Covey)</description>
+    </item>
+    <item>
+      <title>ST1131 Introduction to Statistics and Statistical Computing</title>
+      <link>http://localhost:1313/posts/2024-11-25-st1131-cheat-sheet/</link>
+      <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-11-25-st1131-cheat-sheet/</guid>
+      <description>Concepts I Often Forget or Get Mixed Up</description>
+    </item>
+    <item>
+      <title>Stream Processing</title>
+      <link>http://localhost:1313/posts/2024-11-24-stream-processing/</link>
+      <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-11-24-stream-processing/</guid>
+      <description>Implementation of Source §4 Streams from Scratch in JavaScript</description>
+    </item>
+    <item>
+      <title>CS1231S Discrete Structures</title>
+      <link>http://localhost:1313/posts/2024-11-19-cs1231s-cheat-sheet/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-11-19-cs1231s-cheat-sheet/</guid>
+      <description>These are things I found pretty helpful as an average student. They might not cover everything, but I refer to them whenever I need some intuition.</description>
+    </item>
+    <item>
+      <title>MA1521 Calculus for Computing</title>
+      <link>http://localhost:1313/posts/2024-11-19-ma1521-cheat-sheet/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-11-19-ma1521-cheat-sheet/</guid>
+      <description>Differentiation and integration formulas aren&amp;rsquo;t particularly useful, as more comprehensive lists are provided in the paper.</description>
+    </item>
+  </channel>
+</rss>

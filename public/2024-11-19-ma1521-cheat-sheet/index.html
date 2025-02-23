@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    MA1521 Calculus for Computing | Phanuphat Srisukhawasu
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/2024-11-19-ma1521-cheat-sheet/"/>
+
+<meta property="og:url" content="http://localhost:1313/2024-11-19-ma1521-cheat-sheet/">
+  <meta property="og:site_name" content="Phanuphat Srisukhawasu">
+  <meta property="og:title" content="MA1521 Calculus for Computing">
+  <meta property="og:description" content="Differentiation and integration formulas aren’t particularly useful, as more comprehensive lists are provided in the paper.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-11-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-19T00:00:00+00:00">
+    <meta property="article:tag" content="Cheatsheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.118006e8f5c589e5b687b575b3669e6f8a52b74fa6e3e920dce1c8ef773d6a12.css" media="all">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Phanuphat Srisukhawasu</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/slides" >
+                /slides
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> / </span>
+    
+    <a href="/2024-11-19-ma1521-cheat-sheet/">MA1521 Calculus for Computing</a>
+</div>
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">MA1521 Calculus for Computing</h1>
+    
+    <p class="single-summary">Differentiation and integration formulas aren&rsquo;t particularly useful, as more comprehensive lists are provided in the paper.</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-11-19T00:00:00&#43;00:00">November 19, 2024</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      5 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+  
+
+  <div class="single-tags">
+    
+    <span>
+      <a href="http://localhost:1313/tags/cheatsheet/">#Cheatsheet</a>
+    </span>
+    
+    
+  </div>
+
+  
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#squeeze-theorem">Squeeze Theorem</a></li>
+    <li><a href="#definite-integral-and-ftc">Definite Integral and FTC</a></li>
+    <li><a href="#tests-for-convergencedivergence">Tests for Convergence/Divergence</a>
+      <ul>
+        <li><a href="#n-th-term-test">n-th Term Test</a></li>
+        <li><a href="#integral-test">Integral Test</a></li>
+        <li><a href="#comparison-test">Comparison Test</a></li>
+        <li><a href="#useful-series-for-comparison">Useful Series for Comparison:</a></li>
+        <li><a href="#ratio-test">Ratio Test</a></li>
+        <li><a href="#root-test">Root Test</a></li>
+        <li><a href="#alternating-series-test">Alternating Series Test</a></li>
+        <li><a href="#power-series">Power Series</a></li>
+        <li><a href="#special-cases-for-power-series">Special Cases for Power Series</a></li>
+      </ul>
+    </li>
+    <li><a href="#taylor-series">Taylor Series</a>
+      <ul>
+        <li><a href="#examples-of-taylor-series">Examples of Taylor Series</a></li>
+      </ul>
+    </li>
+    <li><a href="#3d-vector-geometry">3D Vector Geometry</a></li>
+    <li><a href="#multivariable-calculus">Multivariable Calculus</a>
+      <ul>
+        <li><a href="#useful-formula">Useful Formula</a></li>
+        <li><a href="#second-derivative-test">Second Derivative Test</a></li>
+        <li><a href="#double-integrals-as-volume">Double Integrals as Volume</a></li>
+      </ul>
+    </li>
+    <li><a href="#first-order-ode">First Order ODE</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <p><strong>Note</strong>: Taken in AY2024/25 Semester 1</p>
+<h2 class="heading" id="squeeze-theorem">
+  Squeeze Theorem
+  <a class="anchor" href="#squeeze-theorem">#</a>
+</h2>
+<p>If $h(x)\leq g(x)\leq f(x)$ when $x$ is near $a$, except possibly at $a$, and $\displaystyle\lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L$, then $\displaystyle\lim_{x\to a}g(x)=L$.</p>
+<hr>
+<h2 class="heading" id="definite-integral-and-ftc">
+  Definite Integral and FTC
+  <a class="anchor" href="#definite-integral-and-ftc">#</a>
+</h2>
+<p>$\displaystyle\int_a^bf(x)dx=\lim_{n\to\infty}\left(\sum_{i=1}^n\left(\frac{b-a}{n}\right)f\left(a+k\left(\frac{b-a}{n}\right)\right) \right)=F(b)-F(a)$ given that $F$ is an anti-derivative of $f$. Alternatively, $f(x)=\displaystyle\frac{d}{dx}\int_a^x f(t)dt$.</p>
+<hr>
+<h2 class="heading" id="tests-for-convergencedivergence">
+  Tests for Convergence/Divergence
+  <a class="anchor" href="#tests-for-convergencedivergence">#</a>
+</h2>
+<h3 class="heading" id="n-th-term-test">
+  n-th Term Test
+  <a class="anchor" href="#n-th-term-test">#</a>
+</h3>
+<p>For the series $\sum_{n=1}^\infty a_n$:</p>
+<ul>
+<li>If $\lim_{n \to \infty} a_n \neq 0$, then $\sum_{n=1}^\infty a_n$ diverges.</li>
+<li>If $\lim_{n \to \infty} a_n = 0$, the test is inconclusive.</li>
+</ul>
+<h3 class="heading" id="integral-test">
+  Integral Test
+  <a class="anchor" href="#integral-test">#</a>
+</h3>
+<p>For $\sum_{n=1}^\infty a_n$ where $f(n) = a_n \geq 0$:</p>
+<ul>
+<li>If $\int_1^\infty f(x) , dx$ converges, then $\sum_{n=1}^\infty a_n$ converges.</li>
+<li>If $\int_1^\infty f(x) , dx$ diverges, then $\sum_{n=1}^\infty a_n$ diverges.</li>
+</ul>
+<h3 class="heading" id="comparison-test">
+  Comparison Test
+  <a class="anchor" href="#comparison-test">#</a>
+</h3>
+<p>For $\sum_{n=1}^\infty a_n$ and $\sum_{n=1}^\infty b_n$ where $0 \leq a_n \leq b_n$:</p>
+<ul>
+<li>If $\sum_{n=1}^\infty b_n$ converges, then $\sum_{n=1}^\infty a_n$ converges.</li>
+<li>If $\sum_{n=1}^\infty a_n$ diverges, then $\sum_{n=1}^\infty b_n$ diverges.</li>
+</ul>
+<h3 class="heading" id="useful-series-for-comparison">
+  Useful Series for Comparison:
+  <a class="anchor" href="#useful-series-for-comparison">#</a>
+</h3>
+<ol>
+<li>
+<p><strong>Geometric Series</strong>: $\sum_{n=1}^\infty ar^{n-1}$ converges if and only if $\vert r\vert &lt; 1$.</p>
+</li>
+<li>
+<p><strong>p-Series</strong>: $\sum_{n=1}^\infty \frac{1}{n^p}$ converges if and only if $p &gt; 1$.</p>
+</li>
+</ol>
+<h3 class="heading" id="ratio-test">
+  Ratio Test
+  <a class="anchor" href="#ratio-test">#</a>
+</h3>
+<p>For the series $\sum_{n=1}^\infty \vert a_n\vert$, let $\displaystyle L = \lim_{n \to \infty} \lvert \frac{a_{n+1}}{a_n} \rvert$:</p>
+<ul>
+<li>If $L &lt; 1$, then $\sum_{n=1}^\infty \vert a_n\vert$ converges.</li>
+<li>If $L &gt; 1$, then $\sum_{n=1}^\infty a_n$ diverges.</li>
+<li>If $L = 1$, the test is inconclusive.</li>
+</ul>
+<h3 class="heading" id="root-test">
+  Root Test
+  <a class="anchor" href="#root-test">#</a>
+</h3>
+<p>For the series $\sum_{n=1}^\infty \vert a_n\vert$, let $L = \lim_{n \to \infty} \sqrt[n]{\vert a_n\vert}$:</p>
+<ul>
+<li>If $L &lt; 1$, then $\sum_{n=1}^\infty \vert a_n\vert$ converges.</li>
+<li>If $L &gt; 1$, then $\sum_{n=1}^\infty a_n$ diverges.</li>
+<li>If $L = 1$, the test is inconclusive.</li>
+</ul>
+<h3 class="heading" id="alternating-series-test">
+  Alternating Series Test
+  <a class="anchor" href="#alternating-series-test">#</a>
+</h3>
+<p>For $\sum_{n=1}^\infty (-1)^{n-1} b_n$ where: $b_n \geq 0$, $b_n \geq b_{n+1}$, and $\lim_{n \to \infty} b_n = 0$, then $\sum_{n=1}^\infty (-1)^{n-1} b_n$ converges.</p>
+<h3 class="heading" id="power-series">
+  Power Series
+  <a class="anchor" href="#power-series">#</a>
+</h3>
+<p>For the power series $\sum_{n=0}^\infty c_n (x - a)^n$:</p>
+<ul>
+<li>The <strong>radius of convergence</strong> $R$ is given by<br>
+$\displaystyle\lim_{n \to \infty} \left| \frac{c_{n+1}}{c_n} \right| = \frac{1}{R}$.</li>
+<li>The series converges if $\vert x - a\vert &lt; R$ and diverges if $\vert x - a\vert &gt; R$.</li>
+</ul>
+<h3 class="heading" id="special-cases-for-power-series">
+  Special Cases for Power Series
+  <a class="anchor" href="#special-cases-for-power-series">#</a>
+</h3>
+<p>For $\sum_{n=0}^\infty c_n (x - a)^{2n}$ or $\sum_{n=0}^\infty c_n (x - a)^{2n+1}$:</p>
+<ul>
+<li>Let $u_n = c_n (x - a)^{2n}$ or $u_n = c_n (x - a)^{2n+1}$.</li>
+<li>Apply the ratio test: $\displaystyle \lvert \frac{u_{n+1}}{u_n} \rvert = \lim_{n \to \infty} \lvert \frac{c_{n+1}}{c_n} \rvert \lvert x - a\rvert^2 = L \lvert x - a\rvert^2$.</li>
+<li>Converges if $L \lvert x - a\rvert^2 &lt; 1 \iff \lvert x - a\rvert &lt; 1/\sqrt{L}$.</li>
+<li>Diverges if $\lvert x - a\rvert &gt; \frac{1}{\sqrt{L}}$. So, $R = 1/\sqrt{L}$.</li>
+</ul>
+<h2 class="heading" id="taylor-series">
+  Taylor Series
+  <a class="anchor" href="#taylor-series">#</a>
+</h2>
+<p>The Taylor series of $f(x)$ at $x = a$ is: $\displaystyle f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} (x - a)^n$.</p>
+<h3 class="heading" id="examples-of-taylor-series">
+  Examples of Taylor Series
+  <a class="anchor" href="#examples-of-taylor-series">#</a>
+</h3>
+<ol>
+<li>$\displaystyle\frac{1}{1 - x} = \sum_{n=0}^\infty x^n, \ \lvert x\rvert &lt; 1$</li>
+<li>$e^x = \sum_{n=0}^\infty \displaystyle\frac{x^n}{n!}$</li>
+<li>$\sin x = \sum_{n=0}^\infty \displaystyle\frac{(-1)^n x^{2n+1}}{(2n+1)!}$</li>
+<li>$\cos x = \sum_{n=0}^\infty \displaystyle\frac{(-1)^n x^{2n}}{(2n)!}$</li>
+<li>$\tan^{-1} x = \sum_{n=0}^\infty \displaystyle\frac{(-1)^n x^{2n+1}}{2n+1}$</li>
+<li>$\ln(1 - x) = -\sum_{n=0}^\infty \displaystyle\frac{x^{n+1}}{n+1}, \ \lvert x\rvert &lt; 1$</li>
+</ol>
+<hr>
+<h2 class="heading" id="3d-vector-geometry">
+  3D Vector Geometry
+  <a class="anchor" href="#3d-vector-geometry">#</a>
+</h2>
+<ul>
+<li><strong>Distance</strong> from $(x_0,y_0,z_0)$ to a plane $ax+by+cz+d=0$ is $\displaystyle\lvert\frac{ax_0+by_0+cz_0+d}{\sqrt{a^2+b^2+c^2}}\rvert$.</li>
+<li><strong>Tangent Vector</strong>: $\mathbf{r}&rsquo;(t)=\langle x&rsquo;(t),y&rsquo;(t),z&rsquo;(t)\rangle$</li>
+<li><strong>Arc length</strong>: $\displaystyle\int_a^b\sqrt{x&rsquo;(t)^2+y&rsquo;(t)^2+z&rsquo;(t)^2}dt=\int_{x_1}^{x_2}\sqrt{1+f&rsquo;(x)^2}dx=\int_{y_1}^{y_2}\sqrt{1+f&rsquo;(y)^2}dy$.</li>
+</ul>
+<hr>
+<h2 class="heading" id="multivariable-calculus">
+  Multivariable Calculus
+  <a class="anchor" href="#multivariable-calculus">#</a>
+</h2>
+<h3 class="heading" id="useful-formula">
+  Useful Formula
+  <a class="anchor" href="#useful-formula">#</a>
+</h3>
+<ul>
+<li><strong>Gradient</strong>: $\displaystyle \nabla f=\langle \frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\rangle$ is the steepest ascent and normal to the curve $f(x,y)=C$.</li>
+<li><strong>Directional Derivative</strong>: $D_{\hat{\mathbf{u}}}=\nabla f\cdot\hat{\mathbf{u}}$ where $\hat{\mathbf{u}}$ is a unit vector.</li>
+<li><strong>Tangent Plane</strong>: If we have $z=f(x,y)$, then we can use $z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)$. However, if we have $f(x,y,z)=0$, we can use $\nabla f(a,b,c)\cdot \langle x-a,y-b,z-c\rangle=0$.</li>
+<li><strong>Chain Rule</strong>: If $z=f(x,y),x=x(s,t),y=y(s,t)$, then we have the equation: $\displaystyle\frac{\partial z}{\partial s}=\frac{\partial f}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial s}$, where we can replace $s$ with $t$.</li>
+<li><strong>Implicit Differentiation</strong>: For $F(x,y,z)=0$, we have $\displaystyle\frac{\partial z}{\partial x}=-\frac{F_x(x,y,z)}{F_z(x,y,z)}$, where we can replace $x$ with $y$.</li>
+</ul>
+<h3 class="heading" id="second-derivative-test">
+  Second Derivative Test
+  <a class="anchor" href="#second-derivative-test">#</a>
+</h3>
+<p>Suppose $f_x(a, b) = f_y(a, b) = 0$. Define the discriminant $D$ for the point $(a, b)$ by: $D = D(a, b) = f_{xx}(a, b)f_{yy}(a, b) - [f_{xy}(a, b)]^2.$</p>
+<ol>
+<li><strong>If $D &gt; 0$ and $f_{xx}(a, b) &gt; 0$</strong>, then $f$ has a local minimum at $(a, b)$.</li>
+<li><strong>If $D &gt; 0$ and $f_{xx}(a, b) &lt; 0$</strong>, then $f$ has a local maximum at $(a, b)$.</li>
+<li><strong>If $D &lt; 0$</strong>, then $(a, b)$ is a saddle point of $f$.</li>
+<li><strong>If $D = 0$</strong>, then no conclusion can be drawn.</li>
+</ol>
+<h3 class="heading" id="double-integrals-as-volume">
+  Double Integrals as Volume
+  <a class="anchor" href="#double-integrals-as-volume">#</a>
+</h3>
+<ul>
+<li><strong>Type I Region</strong> ($D = \{(x, y) : a \leq x \leq b, , g_1(x) \leq y \leq g_2(x)\}$): $\displaystyle\iint_D f(x, y) , dA = \int_a^b \int_{g_1(x)}^{g_2(x)} f(x, y) , dy , dx$.</li>
+<li><strong>Type II Region</strong> ($D = \{(x, y) : c \leq y \leq d, , h_1(y) \leq y \leq h_2(y)\}$): $\displaystyle\iint_D f(x, y) , dA = \int_c^d \int_{h_1(y)}^{h_2(y)} f(x, y) , dx , dy$.</li>
+<li><strong>Polar Region</strong> ($R = \{(r, \theta) : 0 \leq a \leq r \leq b, , \alpha \leq \theta \leq \beta\}$
+): $\displaystyle\iint_R f(x, y) , dA = \int_\alpha^\beta \int_a^b f(r \cos \theta, r \sin \theta) , r , dr , d\theta.$</li>
+<li><strong>Application on Surface Area</strong>: $\displaystyle \iint_D dS = \iint_D \sqrt{f_x^2 + f_y^2 + 1} , dA$.</li>
+</ul>
+<hr>
+<h2 class="heading" id="first-order-ode">
+  First Order ODE
+  <a class="anchor" href="#first-order-ode">#</a>
+</h2>
+<ul>
+<li>
+<p>A <strong>separable differential equation</strong> has the form: $\displaystyle\frac{dy}{dx} = f(x)g(y)$. The solution can be obtained by integrating: $\displaystyle\int \frac{1}{g(y)} , dy = \int f(x) , dx + C$.</p>
+</li>
+<li>
+<p>For a <strong>homogeneous differential equation</strong> of the form: $\displaystyle y&rsquo; = g\left(\frac{y}{x}\right),$<br>
+use the substitution $y = vx$. This leads to: $\displaystyle \int \frac{dv}{g(v) - v} = \int \frac{dx}{x} + C.$</p>
+</li>
+<li>
+<p>A <strong>linear differential equation</strong> has the form $\displaystyle \frac{dy}{dx} + P(x)y = Q(x)$:</p>
+<ol>
+<li>
+<p>The integrating factor is:<br>
+$I(x) = e^{\int P(x) , dx}.$</p>
+</li>
+<li>
+<p>The equation becomes:<br>
+$(I(x)y)&rsquo; = I(x)Q(x).$</p>
+</li>
+<li>
+<p>The solution is:<br>
+$y = I(x)^{-1} \left[\int I(x) \cdot Q(x) , dx + C\right].$</p>
+</li>
+</ol>
+</li>
+<li>
+<p>A <strong>Bernoulli equation</strong> is of the form: $y&rsquo; + p(x)y = q(x)y^n$. Using the substitution $u = y^{1-n},$ the equation transforms into: $u&rsquo; + (1-n)p(x)u = (1-n)q(x)$.</p>
+</li>
+</ul>
+
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/2024-11-24-stream-processing/">
+                        
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  <footer>
+    
+
+
+  </footer>
+
+  
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+  
+
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

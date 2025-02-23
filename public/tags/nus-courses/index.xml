@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NUS Courses on Phanuphat Srisukhawasu</title>
+    <link>http://localhost:1313/tags/nus-courses/</link>
+    <description>Recent content in NUS Courses on Phanuphat Srisukhawasu</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nus-courses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful Stuffs from MA1522</title>
+      <link>http://localhost:1313/posts/2025-01-24-useful-stuffs-from-ma1522/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-01-24-useful-stuffs-from-ma1522/</guid>
+      <description>Life is a linear equation in which you can&amp;rsquo;t cross multiply! If you think you can do it, you can do it. If you think you can&amp;rsquo;t do it, you can&amp;rsquo;t do it (Quote by Israelmore Ayivor)</description>
+    </item>
+    <item>
+      <title>CS2100 Common Mistakes Part 1</title>
+      <link>http://localhost:1313/posts/2025-01-22-cs2100-common-mistakes-part-1/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-01-22-cs2100-common-mistakes-part-1/</guid>
+      <description>We learn from failure, not from success! (Quote by Bram Stoker)</description>
+    </item>
+    <item>
+      <title>Interesting Problems from CS1231S Past Year Papers</title>
+      <link>http://localhost:1313/posts/2024-11-28-cs1231s-interesting-problems/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-11-28-cs1231s-interesting-problems/</guid>
+      <description>Most of us spend too much time on what is urgent and not enough time on what is important (Quote by Stephen R. Covey)</description>
+    </item>
+    <item>
+      <title>Stream Processing</title>
+      <link>http://localhost:1313/posts/2024-11-24-stream-processing/</link>
+      <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-11-24-stream-processing/</guid>
+      <description>Implementation of Source §4 Streams from Scratch in JavaScript</description>
+    </item>
+  </channel>
+</rss>
