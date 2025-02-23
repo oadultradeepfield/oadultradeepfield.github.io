@@ -1,6 +1,7 @@
 baseURL = 'https://blog.phanuphats.com/'
 languageCode = 'en-us'
 title = 'Phanuphat Srisukhawasu'
+theme = 'typo'
 
 [taxonomies]
 tag = 'tags'
@@ -73,7 +74,3 @@ style = 'catppuccin-mocha'
 # Giscus comments
 [params.giscus]
 enable = false
-
-[module]
-[[module.imports]]
-path = "github.com/tomfran/typo"

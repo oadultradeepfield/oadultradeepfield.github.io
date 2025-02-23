@@ -47,7 +47,7 @@ NUS Fintech Society # Time Series Analysis CS2030S # PE0 Cheat Sheet CS2100 # Mi
 
 
 
-<link rel="stylesheet" href="/assets/combined.min.b9f1e3116a041b0e085d67cbc43c767f7d4c66a499afc63a2e6d81f9b9a68638.css" media="all">
+<link rel="stylesheet" href="/assets/combined.min.118006e8f5c589e5b687b575b3669e6f8a52b74fa6e3e920dce1c8ef773d6a12.css" media="all">
 
 
 
@@ -126,9 +126,9 @@ NUS Fintech Society # Time Series Analysis CS2030S # PE0 Cheat Sheet CS2100 # Mi
 <div class="breadcrumbs">
     
     <a href="/">Home</a>
-    <span class="breadcrumbs-separator"> > </span>
+    <span class="breadcrumbs-separator"> / </span>
     
-    <a class="breadcrumbs-current" href="/slides/">Slides</a>
+    <a href="/slides/">Slides</a>
 </div>
 
 
@@ -214,38 +214,6 @@ NUS Fintech Society # Time Series Analysis CS2030S # PE0 Cheat Sheet CS2100 # Mi
 
 </body>
 
-<script>
-
-  function isAuto() {
-    return document.body.classList.contains("auto");
-  }
-
-  function setTheme() {
-    if (!isAuto()) {
-      return
-    }
-
-    document.body.classList.remove("auto");
-    let cls = "light";
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      cls = "dark";
-    }
-
-    document.body.classList.add(cls);
-  }
-
-  function invertBody() {
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
-  }
-
-  if (isAuto()) {
-    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
-  }
-
-  setTheme();
-
-</script>
-
+<script src="/js/theme-switch.js"></script>
 <script defer src="/js/copy-code.js"></script>
 </html>
