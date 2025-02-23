@@ -65,7 +65,7 @@ url = "/tags"
 # Syntax highlight on code blocks
 [markup]
 [markup.highlight]
-style = 'algol'
+style = 'catppuccin-mocha'
 
 # Giscus comments
 [params.giscus]
