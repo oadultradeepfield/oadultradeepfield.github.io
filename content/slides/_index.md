@@ -30,3 +30,5 @@ For CS2100, I also created this [instruction encoding reference sheet](https://g
 I co-led training at NUS Fintech Society (AY24/25 S1). These are my teaching materials, originally in LaTeX, with adapted styling.
 
 - [Time Series Analysis](fintech-society/2425s1-time-series-analysis.html)
+- [Computer Vision](https://docs.google.com/presentation/d/1eCp89vVcyKy5r-zyzrHECJUHQ87WC6bSHB2s3xdPJto/edit?usp=sharing)
+- [Unsupervised Learning](https://docs.google.com/presentation/d/1s7ZABZ8G3K66UuT3bRozNsq3oDOHjguFZV8j_hml2A0/edit?usp=sharing)
