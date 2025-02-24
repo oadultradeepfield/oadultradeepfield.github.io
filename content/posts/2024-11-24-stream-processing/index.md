@@ -6,7 +6,7 @@ toc: true
 readTime: true
 autonumber: false
 math: true
-tags: ["NUS Courses"]
+tags: ["Course Notes"]
 showTags: true
 ---
 

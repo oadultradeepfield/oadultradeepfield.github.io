@@ -6,7 +6,7 @@ toc: true
 readTime: true
 autonumber: false
 math: true
-tags: ["Cheatsheet"]
+tags: ["Course Notes"]
 showTags: true
 ---
 
