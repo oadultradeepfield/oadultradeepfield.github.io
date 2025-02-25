@@ -19,7 +19,7 @@ class: middle
 - **Time series** are data points indexed in an order of time.
 - It could be sampled as frequent as we want: **every second, every minute, hourly, daily, monthly, yearly, etc.**
 
-.center[<img src ="/slides/fintech-society/img/01-time-series-definition.jpg" height="340"/>]
+.center[<img src ="/materials/fintech-society/img/01-time-series-definition.jpg" height="340"/>]
 
 ---
 
@@ -27,7 +27,7 @@ class: middle
 
 ### Characteristics of Time Series
 
-.center[<img src ="/slides/fintech-society/img/02-time-series-composition.png" height="400"/>
+.center[<img src ="/materials/fintech-society/img/02-time-series-composition.png" height="400"/>
 
 Note: **Residual** (a superset of noises) is **what we are left with**, after analyzing the other components.]
 
@@ -47,7 +47,7 @@ class: middle
 - But when we inspect the data, we generally see that the **data type of the date and time column is a string (object.)**
 
 <br>
-.center[<img src ="/slides/fintech-society/img/03-data-loading.png" height="320"/>]
+.center[<img src ="/materials/fintech-society/img/03-data-loading.png" height="320"/>]
 
 ---
 
@@ -65,7 +65,7 @@ df['Date'] = pd.to_datetime(df['Date'])
 - We also usually do `df = df.set_index('Date')`. This will make the processing more convenient.
 
 <br>
-.center[<img src ="/slides/fintech-society/img/04-time-series-index-datetime.jpg" height="240"/>]
+.center[<img src ="/materials/fintech-society/img/04-time-series-index-datetime.jpg" height="240"/>]
 
 ---
 
@@ -77,7 +77,7 @@ class: middle
 - For this example dataset, we already know that we don't have any missing data. But if we do, we could use `df = df.ffill()`. After that, we could use `sns.lineplot()` from Seaborn to visualize the data.
 
 <br>
-.center[<img src ="/slides/fintech-society/img/05-time-series-visualization.png" height="280"/>]
+.center[<img src ="/materials/fintech-society/img/05-time-series-visualization.png" height="280"/>]
 
 ---
 
@@ -88,7 +88,7 @@ class: middle
 - In this example, we have a data recorded in a **daily basis.** In some cases, we may want to analyze the data in a **weekly, monthly, or yearly basis.**
 - In Pandas, we could resample the data as frequent as we want: `df = df.resample(<FREQ>).mean()`.
 
-.center[<img src ="/slides/fintech-society/img/06-time-series-weekly.png" height="280"/>]
+.center[<img src ="/materials/fintech-society/img/06-time-series-weekly.png" height="280"/>]
 
 Note: The above plot is generated from sampling the data using `'W'` as `<FREQ>` and calculate the average. This will resample the data **weekly.** The plot is more smoothed out compared to the previous. For other frequencies, you may refer to this [link](https://pandas.pydata.org/docs/user_guide/timeseries.html).
 
@@ -122,7 +122,7 @@ class: middle
 ### Creating Time Series Features - Lag Features
 
 <br>
-.center[<img src ="/slides/fintech-society/img/07-time-series-features.png" height="340"/>]
+.center[<img src ="/materials/fintech-society/img/07-time-series-features.png" height="340"/>]
 <br>
 
 Note: The **numbers of lagging features** to use could be one of the **hyperparameters** to tune.
@@ -184,7 +184,7 @@ class: middle
 
 ### Example Results of ARIMA
 
-.center[<img src ="/slides/fintech-society/img/08-time-series-arima.png" height="400"/>
+.center[<img src ="/materials/fintech-society/img/08-time-series-arima.png" height="400"/>
 
 Note: Sometimes, it is difficult to judge the **performance** by eyes. In the next section, we will introduce **numerical metrics to evaluate the models**.]
 
@@ -203,7 +203,7 @@ class: middle
 - When it comes to time series, we **cannot use random subsets** of data as the _training and testing sets_.
 - Obviously, we want to train the model on _the past data to forecast the future_ Therefore, this is what we usually do:
 
-.center[<img src ="/slides/fintech-society/img/09-time-series-data-split.png" height="360"/>]
+.center[<img src ="/materials/fintech-society/img/09-time-series-data-split.png" height="360"/>]
 
 ---
 
@@ -222,7 +222,7 @@ class: middle
 
 ### Bagging and Boosting Illustration
 
-.center[<img src ="/slides/fintech-society/img/10-bagging-and-boosting.jpg" height="400"/>
+.center[<img src ="/materials/fintech-society/img/10-bagging-and-boosting.jpg" height="400"/>
 
 Note: you can read more about the mathematical details of each model [here](https://www.mit.edu/~9.520/spring06/Classes/class10.pdf?ref=jeremyjordan.me).]
 
@@ -326,9 +326,9 @@ class: middle
 
 1. View the predicted time series by using
    `Python
-    y_train_pred = model.predict(X_train) # and/or
-    y_test_pred = model.predict(X_test)
-    `
+ y_train_pred = model.predict(X_train) # and/or
+ y_test_pred = model.predict(X_test)
+ `
    then plot the results.
 
 2. Evaluate the numerical metrics **(RMSE, MAE, and R-Squared)** using functions from `sklearn.metrics`. For example:
@@ -369,6 +369,6 @@ class: middle
 
 - This is how the cross-validation looks like when using `TimeSeriesSplit(n_splits=4)`.
 
-.center[<img src ="/slides/fintech-society/img/11-time-series-split.png" height="360"/>
+.center[<img src ="/materials/fintech-society/img/11-time-series-split.png" height="360"/>
 
 Note: More complex models like **Random Forests** and **XGBoost** have lots of hyperparameters to tune. You may consider looking at a _lightweight version of XGBoost_, **LightGBM** as well.]

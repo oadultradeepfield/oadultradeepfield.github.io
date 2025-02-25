@@ -1,11 +1,11 @@
 ---
-title: "Slides"
+title: "Materials"
 autonumber: false
 toc: true
 math: true
 ---
 
-These are supplementary materials I created during my studies, mainly at NUS. I categorize them by topic and semester when applicable.
+These are supplementary notes and slides I created during my studies, mainly at NUS. I categorize them by topic and semester when applicable.
 
 **Note**: My cheat sheet covers only what I often forget or what helps with problem-solving and reducing errors, not everything.
 

@@ -8,7 +8,7 @@ tag = 'tags'
 
 [params]
 # Meta description
-description = "My blog where I share my mini pet projects and cool findings I've encountered along my learning and building journeys."
+description = "My blog where I share my projects and cool findings I've encountered along my learning and building journeys."
 showFooter = false
 
 # Appearance settings
@@ -21,7 +21,7 @@ homeIntroTitle = '@oadultradeepfield'
 homeIntroContent = """
 Hi! I'm Oad! Right now, I'm focused on two things I enjoy: improving everyday processes to make them faster and more fun, and creating interactive tools that make learning engaging and exciting.
 
-On this website, I share my mini pet projects and cool findings I've encountered along my learning and building journeys.
+On this website, I share my projects and cool findings I've encountered along my learning and building journeys.
 """
 
 # Collection to display on home
@@ -45,10 +45,6 @@ url = "https://www.linkedin.com/in/phanuphats/"
 name = "github"
 url = "https://github.com/oadultradeepfield"
 
-[[params.social]]
-name = "rss"
-url = "https://www.phanuphats.com/"
-
 # Main menu pages
 [[params.menu]]
 name = "home"
@@ -59,8 +55,12 @@ name = "posts"
 url = "/posts"
 
 [[params.menu]]
-name = "slides"
-url = "/slides"
+name = "projects"
+url = "/projects"
+
+[[params.menu]]
+name = "materials"
+url = "/materials"
 
 [[params.menu]]
 name = "tags"

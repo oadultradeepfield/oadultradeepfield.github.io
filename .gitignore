@@ -3,7 +3,7 @@
 
 # Generated files by hugo
 /public/*
-!/public/slides
+!/public/materials
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
