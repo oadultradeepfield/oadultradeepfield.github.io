@@ -8,6 +8,8 @@ class: middle
 Total Assets = Equity + Total Liabilities
 Market Value of Equity = Stock Price * Number of Shares
 Net Working Capital = Current (Assets - Liabilities)
+Increased in Retained Earnings = Net Income - Dividends
+Gross Investment = Changes in Fixed Assets + Depreciation
 ```
 
 **Note**: For later problems, where debt-equity ratio = 1. We can say that `Total Liabilities = Debt` to simplify the problem.
