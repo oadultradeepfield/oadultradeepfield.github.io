@@ -41,6 +41,7 @@ class: middle
 
 ```tex
 Free Cash Flow = CFO + CFI + Interest Expenses
+                   - Changes in NWC
 ```
 
 ```tex
