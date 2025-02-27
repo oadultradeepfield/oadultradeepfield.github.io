@@ -38,6 +38,10 @@ breadcrumbs = true
 
 # Social icons
 [[params.social]]
+name = "readdotcv"
+url = "/resume/resume.pdf"
+
+[[params.social]]
 name = "linkedin"
 url = "https://www.linkedin.com/in/phanuphats/"
 
@@ -61,10 +65,6 @@ url = "/projects"
 [[params.menu]]
 name = "materials"
 url = "/materials"
-
-[[params.menu]]
-name = "tags"
-url = "/tags"
 
 # Syntax highlight on code blocks
 [markup]
