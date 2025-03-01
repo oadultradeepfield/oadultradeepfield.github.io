@@ -12,6 +12,8 @@ These are supplementary notes and slides I created during my studies, mainly at 
 ## CS2030S
 
 - [PE0 Cheat Sheet](cs2030s/2425s2-pe0.html)
+- [PE1 & Midterm Cheat Sheet](cs2030s/2425s2-pe1-midterm.html)
+- [PE1 & Midterm Cheat Sheet (For Print)](cs2030s/2425s2-pe1-midterm-print.html)
 
 ## CS2100
 
