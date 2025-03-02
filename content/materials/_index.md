@@ -15,6 +15,10 @@ These are supplementary notes and slides I created during my studies, mainly at 
 - [PE1 & Midterm Cheat Sheet](cs2030s/2425s2-pe1-midterm.html)
 - [PE1 & Midterm Cheat Sheet (For Print)](cs2030s/2425s2-pe1-midterm-print.html)
 
+## CS2040s
+
+- [Midterm Cheat Sheet](cs2040s/2425s2-midterm.pdf)
+
 ## CS2100
 
 For CS2100, I also created this [instruction encoding reference sheet](https://github.com/oadultradeepfield/mim-cs2100), which is arguably easier and faster to use than the provided one.
