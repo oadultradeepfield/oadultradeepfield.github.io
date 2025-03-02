@@ -25,6 +25,7 @@ For CS2100, I also created this [instruction encoding reference sheet](https://g
 
 - [Midterm Cheat Sheet](cs2100/2425s2-midterm.html)
 - [Midterm Cheat Sheet (For Print)](cs2100/2425s2-midterm-print.html)
+- [Midterm Cheat Sheet (Handwritten: The one I actually use)](cs2100/2425s2-midterm-handwritten.pdf)
 
 ## GEC1015
 
