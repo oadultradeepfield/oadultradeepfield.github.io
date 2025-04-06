@@ -188,7 +188,7 @@ for (let step = 0; step < duration / dt; step++) {
 
 ## Results
 
-I ran the entire code using the JavaScript code editor available on Source Academy (you can check out [this blog](https://blog.phanuphats.com/posts/2024-11-24-stream-processing) to learn more about it). If you want to try running this code yourself, you can check out [this link](https://share.sourceacademy.org/twobodysimulation). Just make sure to change the language from Source §4 to full JavaScript before running it. Here’s the output.
+I ran the entire code using the JavaScript code editor available on Source Academy (you can check out [this blog](https://phanuphats.com/posts/2024-11-24-stream-processing) to learn more about it). If you want to try running this code yourself, you can check out [this link](https://share.sourceacademy.org/twobodysimulation). Just make sure to change the language from Source §4 to full JavaScript before running it. Here’s the output.
 
 ```bash
 Step 1: Sun - x: 0.11540318675068137, y: 0.0000275671688399945 Earth - x: 149599961564.4778, y: 107207990.81863718

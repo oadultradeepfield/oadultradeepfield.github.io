@@ -1,4 +1,4 @@
-baseURL = 'https://blog.phanuphats.com/'
+baseURL = 'https://phanuphats.com/'
 languageCode = 'en-us'
 title = 'Phanuphat Srisukhawasu'
 theme = 'typo'
