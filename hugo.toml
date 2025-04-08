@@ -65,7 +65,7 @@ url = "/materials"
 # Syntax highlight on code blocks
 [markup]
 [markup.highlight]
-style = 'catppuccin-mocha'
+style = 'catppuccin-latte'
 
 # Giscus comments
 [params.giscus]
