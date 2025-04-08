@@ -12,7 +12,7 @@ description = "My blog where I share my projects and cool findings I've encounte
 showFooter = false
 
 # Appearance settings
-theme = 'auto'
+theme = 'light'
 colorPalette = 'base16-eighties'
 hideHeader = false
 
