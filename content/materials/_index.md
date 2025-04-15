@@ -34,6 +34,7 @@ For CS2100, I also created this [instruction encoding reference sheet](https://g
 
 - [Midterm Cheat Sheet](is2218/2425s2-midterm.html)
 - [Midterm Cheat Sheet (For Print)](is2218/2425s2-midterm-print.html)
+- [Final Cheat Sheet](is2218/2425s2-final.pdf)
 
 ## ST2334
 
