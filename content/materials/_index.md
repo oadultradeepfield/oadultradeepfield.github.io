@@ -37,6 +37,12 @@ For CS2100, I also created this [instruction encoding reference sheet](https://g
 - [Midterm Cheat Sheet (For Print)](is2218/2425s2-midterm-print.html)
 - [Final Cheat Sheet](is2218/2425s2-final.pdf)
 
+## MA1522
+
+I took this course in AY24/25 S2. There was no MATLAB questions in the exam.
+
+- [Final Cheat Sheet](ma1522/2425s2-final.pdf)
+
 ## ST2334
 
 - [Midterm Cheat Sheet](st2334/2425s2-midterm.html)
