@@ -25,6 +25,7 @@ These are supplementary notes and slides I created during my studies, mainly at 
 For CS2100, I also created this [instruction encoding reference sheet](https://github.com/oadultradeepfield/mim-cs2100), which is arguably easier and faster to use than the provided one.
 
 - [Midterm Cheat Sheet](cs2100/2425s2-midterm.pdf)
+- [Final Cheat Sheet](cs2100/2425s2-final.pdf)
 
 ## GEC1015
 
