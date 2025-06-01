@@ -39,7 +39,7 @@ breadcrumbs = true
 # Social icons
 [[params.social]]
 name = "readdotcv"
-url = "/resume/resume.pdf"
+url = "/resume/phanuphat_srisukhawasu_resume.pdf"
 
 [[params.social]]
 name = "linkedin"
